@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7704DBF51F7B775A00C069FF /* QTElementToView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBF41F7B775A00C069FF /* QTElementToView.m */; };
+		7704DBF81F7B780E00C069FF /* QTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBF71F7B780E00C069FF /* QTBaseView.m */; };
+		7704DBFB1F7B783C00C069FF /* QTFinshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBFA1F7B783C00C069FF /* QTFinshView.m */; };
+		7704DBFE1F7B784B00C069FF /* QTHorizonBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBFD1F7B784B00C069FF /* QTHorizonBlockView.m */; };
+		7704DC011F7B785C00C069FF /* QTVerticalBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */; };
+		7704DC041F7B788700C069FF /* QTViewFatory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DC031F7B788700C069FF /* QTViewFatory.m */; };
 		77B909C11F7A03A500F9CBFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909C01F7A03A500F9CBFB /* AppDelegate.m */; };
 		77B909C41F7A03A500F9CBFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909C31F7A03A500F9CBFB /* ViewController.m */; };
 		77B909C71F7A03A500F9CBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B909C51F7A03A500F9CBFB /* Main.storyboard */; };
 		77B909C91F7A03A500F9CBFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B909C81F7A03A500F9CBFB /* Assets.xcassets */; };
 		77B909CC1F7A03A500F9CBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B909CA1F7A03A500F9CBFB /* LaunchScreen.storyboard */; };
 		77B909CF1F7A03A500F9CBFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909CE1F7A03A500F9CBFB /* main.m */; };
+		77B909D71F7A06CA00F9CBFB /* GameBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909D61F7A06CA00F9CBFB /* GameBoardView.m */; };
+		77B909DB1F7A1A0700F9CBFB /* QTGameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909DA1F7A1A0700F9CBFB /* QTGameEngine.m */; };
+		77B909DE1F7A1A5800F9CBFB /* QTGameMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909DD1F7A1A5800F9CBFB /* QTGameMap.m */; };
+		77B909E11F7A1C0E00F9CBFB /* QTGameElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E01F7A1C0E00F9CBFB /* QTGameElement.m */; };
+		77B909E41F7A20AA00F9CBFB /* QTFishHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E31F7A20AA00F9CBFB /* QTFishHeader.m */; };
+		77B909E71F7A217600F9CBFB /* QTFishBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E61F7A217600F9CBFB /* QTFishBlocker.m */; };
+		77B909EA1F7A21B100F9CBFB /* QTGameElementFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E91F7A21B100F9CBFB /* QTGameElementFactory.m */; };
+		77B909ED1F7A266600F9CBFB /* QTIdentifyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7704DBF31F7B775A00C069FF /* QTElementToView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTElementToView.h; sourceTree = "<group>"; };
+		7704DBF41F7B775A00C069FF /* QTElementToView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTElementToView.m; sourceTree = "<group>"; };
+		7704DBF61F7B780E00C069FF /* QTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTBaseView.h; sourceTree = "<group>"; };
+		7704DBF71F7B780E00C069FF /* QTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTBaseView.m; sourceTree = "<group>"; };
+		7704DBF91F7B783C00C069FF /* QTFinshView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTFinshView.h; sourceTree = "<group>"; };
+		7704DBFA1F7B783C00C069FF /* QTFinshView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTFinshView.m; sourceTree = "<group>"; };
+		7704DBFC1F7B784B00C069FF /* QTHorizonBlockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTHorizonBlockView.h; sourceTree = "<group>"; };
+		7704DBFD1F7B784B00C069FF /* QTHorizonBlockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTHorizonBlockView.m; sourceTree = "<group>"; };
+		7704DBFF1F7B785C00C069FF /* QTVerticalBlockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTVerticalBlockView.h; sourceTree = "<group>"; };
+		7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTVerticalBlockView.m; sourceTree = "<group>"; };
+		7704DC021F7B788700C069FF /* QTViewFatory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTViewFatory.h; sourceTree = "<group>"; };
+		7704DC031F7B788700C069FF /* QTViewFatory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTViewFatory.m; sourceTree = "<group>"; };
 		77B909BC1F7A03A500F9CBFB /* CrackQianTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrackQianTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B909BF1F7A03A500F9CBFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77B909C01F7A03A500F9CBFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +52,22 @@
 		77B909CB1F7A03A500F9CBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B909CD1F7A03A500F9CBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B909CE1F7A03A500F9CBFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77B909D51F7A06CA00F9CBFB /* GameBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBoardView.h; sourceTree = "<group>"; };
+		77B909D61F7A06CA00F9CBFB /* GameBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBoardView.m; sourceTree = "<group>"; };
+		77B909D91F7A1A0700F9CBFB /* QTGameEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTGameEngine.h; sourceTree = "<group>"; };
+		77B909DA1F7A1A0700F9CBFB /* QTGameEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTGameEngine.m; sourceTree = "<group>"; };
+		77B909DC1F7A1A5800F9CBFB /* QTGameMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTGameMap.h; sourceTree = "<group>"; };
+		77B909DD1F7A1A5800F9CBFB /* QTGameMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTGameMap.m; sourceTree = "<group>"; };
+		77B909DF1F7A1C0E00F9CBFB /* QTGameElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTGameElement.h; sourceTree = "<group>"; };
+		77B909E01F7A1C0E00F9CBFB /* QTGameElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTGameElement.m; sourceTree = "<group>"; };
+		77B909E21F7A20AA00F9CBFB /* QTFishHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTFishHeader.h; sourceTree = "<group>"; };
+		77B909E31F7A20AA00F9CBFB /* QTFishHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTFishHeader.m; sourceTree = "<group>"; };
+		77B909E51F7A217600F9CBFB /* QTFishBlocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTFishBlocker.h; sourceTree = "<group>"; };
+		77B909E61F7A217600F9CBFB /* QTFishBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTFishBlocker.m; sourceTree = "<group>"; };
+		77B909E81F7A21B100F9CBFB /* QTGameElementFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTGameElementFactory.h; sourceTree = "<group>"; };
+		77B909E91F7A21B100F9CBFB /* QTGameElementFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTGameElementFactory.m; sourceTree = "<group>"; };
+		77B909EB1F7A266600F9CBFB /* QTIdentifyGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTIdentifyGenerator.h; sourceTree = "<group>"; };
+		77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTIdentifyGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7704DBF21F7B773800C069FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7704DBF31F7B775A00C069FF /* QTElementToView.h */,
+				7704DBF41F7B775A00C069FF /* QTElementToView.m */,
+				77B909D51F7A06CA00F9CBFB /* GameBoardView.h */,
+				77B909D61F7A06CA00F9CBFB /* GameBoardView.m */,
+				7704DBF61F7B780E00C069FF /* QTBaseView.h */,
+				7704DBF71F7B780E00C069FF /* QTBaseView.m */,
+				7704DBF91F7B783C00C069FF /* QTFinshView.h */,
+				7704DBFA1F7B783C00C069FF /* QTFinshView.m */,
+				7704DBFC1F7B784B00C069FF /* QTHorizonBlockView.h */,
+				7704DBFD1F7B784B00C069FF /* QTHorizonBlockView.m */,
+				7704DBFF1F7B785C00C069FF /* QTVerticalBlockView.h */,
+				7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */,
+				7704DC021F7B788700C069FF /* QTViewFatory.h */,
+				7704DC031F7B788700C069FF /* QTViewFatory.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		77B909B31F7A03A500F9CBFB = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +121,8 @@
 		77B909BE1F7A03A500F9CBFB /* CrackQianTang */ = {
 			isa = PBXGroup;
 			children = (
+				7704DBF21F7B773800C069FF /* View */,
+				77B909D81F7A06D200F9CBFB /* GameEngine */,
 				77B909BF1F7A03A500F9CBFB /* AppDelegate.h */,
 				77B909C01F7A03A500F9CBFB /* AppDelegate.m */,
 				77B909C21F7A03A500F9CBFB /* ViewController.h */,
@@ -69,6 +134,27 @@
 				77B909CE1F7A03A500F9CBFB /* main.m */,
 			);
 			path = CrackQianTang;
+			sourceTree = "<group>";
+		};
+		77B909D81F7A06D200F9CBFB /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				77B909D91F7A1A0700F9CBFB /* QTGameEngine.h */,
+				77B909DA1F7A1A0700F9CBFB /* QTGameEngine.m */,
+				77B909DC1F7A1A5800F9CBFB /* QTGameMap.h */,
+				77B909DD1F7A1A5800F9CBFB /* QTGameMap.m */,
+				77B909EB1F7A266600F9CBFB /* QTIdentifyGenerator.h */,
+				77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */,
+				77B909E81F7A21B100F9CBFB /* QTGameElementFactory.h */,
+				77B909E91F7A21B100F9CBFB /* QTGameElementFactory.m */,
+				77B909DF1F7A1C0E00F9CBFB /* QTGameElement.h */,
+				77B909E01F7A1C0E00F9CBFB /* QTGameElement.m */,
+				77B909E21F7A20AA00F9CBFB /* QTFishHeader.h */,
+				77B909E31F7A20AA00F9CBFB /* QTFishHeader.m */,
+				77B909E51F7A217600F9CBFB /* QTFishBlocker.h */,
+				77B909E61F7A217600F9CBFB /* QTFishBlocker.m */,
+			);
+			path = GameEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +229,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B909C41F7A03A500F9CBFB /* ViewController.m in Sources */,
+				7704DBF51F7B775A00C069FF /* QTElementToView.m in Sources */,
+				77B909E41F7A20AA00F9CBFB /* QTFishHeader.m in Sources */,
+				77B909ED1F7A266600F9CBFB /* QTIdentifyGenerator.m in Sources */,
+				77B909DB1F7A1A0700F9CBFB /* QTGameEngine.m in Sources */,
+				7704DC011F7B785C00C069FF /* QTVerticalBlockView.m in Sources */,
 				77B909CF1F7A03A500F9CBFB /* main.m in Sources */,
+				77B909EA1F7A21B100F9CBFB /* QTGameElementFactory.m in Sources */,
+				77B909E11F7A1C0E00F9CBFB /* QTGameElement.m in Sources */,
+				7704DBFB1F7B783C00C069FF /* QTFinshView.m in Sources */,
+				77B909DE1F7A1A5800F9CBFB /* QTGameMap.m in Sources */,
+				7704DBF81F7B780E00C069FF /* QTBaseView.m in Sources */,
+				77B909E71F7A217600F9CBFB /* QTFishBlocker.m in Sources */,
+				7704DC041F7B788700C069FF /* QTViewFatory.m in Sources */,
 				77B909C11F7A03A500F9CBFB /* AppDelegate.m in Sources */,
+				77B909D71F7A06CA00F9CBFB /* GameBoardView.m in Sources */,
+				7704DBFE1F7B784B00C069FF /* QTHorizonBlockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +380,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CrackQianTang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matrix.CrackQianTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -293,10 +394,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CrackQianTang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matrix.CrackQianTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

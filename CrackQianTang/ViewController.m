@@ -7,16 +7,32 @@
 //
 
 #import "ViewController.h"
+#import "QTGameEngine.h"
+#import "GameBoardView.h"
 
 @interface ViewController ()
-
+@property(nonatomic,strong)GameBoardView* gameBoard;
+@property(nonatomic,strong)QTGameEngine* gameEngine;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
+    GameBoardView* game = [[GameBoardView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds)-20, CGRectGetWidth(self.view.bounds)-20)];
+    game.center = self.view.center;
+    [game setNeedsLayout];
+    [game setNeedsDisplay];
+    [self.view addSubview:self.gameBoard];
+    
+    self.gameBoard = game;
+    self.gameEngine = [[QTGameEngine alloc] init];
+    
+    [self.gameBoard drawGameWithMap:[self.gameEngine gameMap]];
+
 }
 
 
