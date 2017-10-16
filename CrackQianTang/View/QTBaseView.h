@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QTGameElement.h"
 @interface QTBaseView : UIView
--(QTBaseView*)generateQTView:(QTGameElement*)element;
+
+
+
 @end

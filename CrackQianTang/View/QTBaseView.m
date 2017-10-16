@@ -22,19 +22,4 @@
 }
 */
 
--(QTBaseView*)generateQTView:(QTGameElement*)element
-{
-    if ([element isKindOfClass:[QTFishBlocker class]]) {
-        
-        QTFishBlocker* blocker = (QTFishBlocker*)element;
-        
-        
-    }
-    
-    if ([element isKindOfClass:[QTFishHeader class]]) {
-        
-    }
-    
-}
-
 @end

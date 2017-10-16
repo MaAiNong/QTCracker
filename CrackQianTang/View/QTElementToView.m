@@ -9,5 +9,5 @@
 #import "QTElementToView.h"
 
 @implementation QTElementToView
--(UIView*)
+//-(UIView*)
 @end

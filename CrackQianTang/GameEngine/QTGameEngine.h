@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "QTGameMap.h"
 
 @interface QTGameEngine : NSObject
 -(void)start;

@@ -32,9 +32,9 @@
     [map addGameElement:BLOCKER_V(5, 1, 2)];
     [map addGameElement:BLOCKER_V(2, 3, 3)];
     //水平
-    [map addGameElement:BLOCKER_V(0, 3, 2)];
-    [map addGameElement:BLOCKER_V(3, 4, 2)];
-    [map addGameElement:BLOCKER_V(3, 5, 2)];
+    [map addGameElement:BLOCKER_H(0, 3, 2)];
+    [map addGameElement:BLOCKER_H(3, 4, 2)];
+    [map addGameElement:BLOCKER_H(3, 5, 2)];
     
     self.gameMap = map;
     
@@ -50,6 +50,6 @@
 
 -(QTGameMap*)gameMap
 {
-    return self.gameMap;
+    return _gameMap;
 }
 @end

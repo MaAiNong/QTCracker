@@ -10,6 +10,6 @@
 #import "QTGameMap.h"
 @interface GameBoardView : UIView
 
--(void)drawGameWithMap:(QTGameMap*)map
+-(void)drawGameWithMap:(QTGameMap*)map;
 
 @end

@@ -26,10 +26,11 @@
     game.center = self.view.center;
     [game setNeedsLayout];
     [game setNeedsDisplay];
+    self.gameBoard = game;
     [self.view addSubview:self.gameBoard];
     
-    self.gameBoard = game;
     self.gameEngine = [[QTGameEngine alloc] init];
+    [self.gameEngine start];
     
     [self.gameBoard drawGameWithMap:[self.gameEngine gameMap]];
 

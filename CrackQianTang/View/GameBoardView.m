@@ -7,6 +7,7 @@
 //
 
 #import "GameBoardView.h"
+#import "QTViewFatory.h"
 #import "QTGameElement.h"
 #define UIColorFromRGB(rgbValue)            [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1]
 
@@ -26,27 +27,38 @@
 
 -(void)drawGameWithMap:(QTGameMap*)map
 {
-    if (_currentMap)
-    {
-        _currentMap = map;
-        UIView animateWithDuration:0.3 animations:^{
-            [self changeGameMap:map];
-        }
-        
-    }
-    else
-    {
-        _currentMap = map;
-        [self parseGameMap:map];
-    }
+//    if (_currentMap)
+//    {
+//        _currentMap = map;
+//        UIView animateWithDuration:0.3 animations:^{
+//            [self changeGameMap:map];
+//        }
+//
+//    }
+//    else
+//    {
+    _currentMap = map;
+    [self parseGameMap:map];
+//    }
 }
 
 -(void)parseGameMap:(QTGameMap*)map
 {
-    for (UIView* sview in [self subviews]) {
-        [sview removeFromSuperview];
-    }
+    NSEnumerator* enumerator = [map enumerator];
     
+    QTGameElement* elment = [enumerator nextObject];
+    
+    while (elment) {
+        
+        QTBaseView* view = [QTViewFatory generateBaseViewByElement:elment frame:self.bounds];
+        
+        if (view) {
+            
+            [self addSubview:view];
+        }
+        
+        elment = [enumerator nextObject];
+    }
     
 }
 
