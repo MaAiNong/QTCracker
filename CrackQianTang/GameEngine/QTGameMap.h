@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "QTGameElement.h"
-@interface QTGameMap : NSObject
+#import "EKQueue.h"
+@interface QTGameMap : EKQueue
 -(NSEnumerator*)enumerator;
 -(QTGameMap*)addGameElement:(QTGameElement*)element;
 -(BOOL)isValid;

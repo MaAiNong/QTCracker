@@ -9,35 +9,34 @@
 #import "QTGameMap.h"
 
 @implementation QTGameMap
-{
-    NSMutableArray* _elements;
-}
+
 -(id)init
 {
-    if (self  = [super init]) {
-        _elements = [[NSMutableArray alloc] init];
+    if (self  = [super init])
+    {
+        
     }
     return self;
 }
 
 -(QTGameMap*)addGameElement:(QTGameElement *)element
 {
-    [_elements addObject:element];
+    [self insertObject:element];
     
     return self;
 }
 
 -(NSEnumerator*)enumerator
 {
-    if (_elements&&_elements.count>0) {
-        return [_elements objectEnumerator];
+    if (![self isEmpty]) {
+        return [[self allObjectsFromQueue] objectEnumerator];
     }
     return nil;
 }
 
 -(BOOL)isValid
 {
-    for (QTGameElement* element in _elements) {
+    for (QTGameElement* element in [self allObjectsFromQueue]) {
         if (![element isValid]) {
             return NO;
         }

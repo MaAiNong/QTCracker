@@ -12,4 +12,5 @@
 @interface QTGameEngine : NSObject
 -(void)start;
 -(QTGameMap*)gameMap;
+-(void)crack;
 @end

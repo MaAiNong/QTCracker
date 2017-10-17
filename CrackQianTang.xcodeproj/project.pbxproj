@@ -13,6 +13,34 @@
 		7704DBFE1F7B784B00C069FF /* QTHorizonBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBFD1F7B784B00C069FF /* QTHorizonBlockView.m */; };
 		7704DC011F7B785C00C069FF /* QTVerticalBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */; };
 		7704DC041F7B788700C069FF /* QTViewFatory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DC031F7B788700C069FF /* QTViewFatory.m */; };
+		7752A1C81F960DC700D53D3B /* EKTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1811F96094200D53D3B /* EKTree.m */; };
+		7752A1C91F960DC700D53D3B /* EKTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1821F96094200D53D3B /* EKTreeNode.m */; };
+		7752A1CA1F960DC700D53D3B /* EKNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1881F96094200D53D3B /* EKNode.m */; };
+		7752A1CB1F960DC700D53D3B /* EKLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A18B1F96094200D53D3B /* EKLinkedList.m */; };
+		7752A1CC1F960DC700D53D3B /* EKGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A18E1F96094200D53D3B /* EKGraph.m */; };
+		7752A1CD1F960DC700D53D3B /* EKVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A18F1F96094200D53D3B /* EKVertex.m */; };
+		7752A1CE1F960DC700D53D3B /* EKEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1901F96094200D53D3B /* EKEdge.m */; };
+		7752A1CF1F960DC700D53D3B /* EKBHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1961F96094200D53D3B /* EKBHeap.m */; };
+		7752A1D01F960DC700D53D3B /* EKBSTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1981F96094200D53D3B /* EKBSTree.m */; };
+		7752A1D11F960DC700D53D3B /* EKBTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A19B1F96094200D53D3B /* EKBTreeNode.m */; };
+		7752A1D21F960DC700D53D3B /* EKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A19D1F96094200D53D3B /* EKStack.m */; };
+		7752A1D31F960DC700D53D3B /* EKDeque.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A19E1F96094200D53D3B /* EKDeque.m */; };
+		7752A1D41F960DC700D53D3B /* EKQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A19F1F96094200D53D3B /* EKQueue.m */; };
+		7752A1D51F960DC700D53D3B /* EKBTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1A21F96094200D53D3B /* EKBTree.m */; };
+		7752A1D61F960DC700D53D3B /* EKAVLTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1A61F96094200D53D3B /* EKAVLTreeNode.m */; };
+		7752A1D71F960DC700D53D3B /* EKAVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1A71F96094200D53D3B /* EKAVLTree.m */; };
+		7752A1D81F960DC700D53D3B /* NSDictionary+EKStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1AF1F96094200D53D3B /* NSDictionary+EKStuff.m */; };
+		7752A1D91F960DC700D53D3B /* NSNumber+EKComparisonForIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1B11F96094200D53D3B /* NSNumber+EKComparisonForIOS.m */; };
+		7752A1DA1F960DC700D53D3B /* NSObject+EKComparisonForIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1B41F96094200D53D3B /* NSObject+EKComparisonForIOS.m */; };
+		7752A1DB1F960DC700D53D3B /* EKRecursionStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1B51F96094200D53D3B /* EKRecursionStuff.m */; };
+		7752A1DC1F960DC700D53D3B /* NSString+EKStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1B61F96094200D53D3B /* NSString+EKStuff.m */; };
+		7752A1DD1F960DC700D53D3B /* SSRadixNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1BA1F96094200D53D3B /* SSRadixNode.m */; };
+		7752A1DE1F960DC700D53D3B /* NSArray+EKSorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1BB1F96094200D53D3B /* NSArray+EKSorting.m */; };
+		7752A1DF1F960DC700D53D3B /* NSNumber+EKStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1BC1F96094200D53D3B /* NSNumber+EKStuff.m */; };
+		7752A1E01F960DC700D53D3B /* NSArray+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1BE1F96094200D53D3B /* NSArray+Selection.m */; };
+		7752A1E11F960DC700D53D3B /* NSArray+EKStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1C01F96094200D53D3B /* NSArray+EKStuff.m */; };
+		7752A1E21F960DC700D53D3B /* EKALocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1C31F96094200D53D3B /* EKALocation.m */; };
+		7752A1E31F960DC700D53D3B /* NSArray+EKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7752A1C41F96094200D53D3B /* NSArray+EKGeometry.m */; };
 		77B909C11F7A03A500F9CBFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909C01F7A03A500F9CBFB /* AppDelegate.m */; };
 		77B909C41F7A03A500F9CBFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909C31F7A03A500F9CBFB /* ViewController.m */; };
 		77B909C71F7A03A500F9CBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B909C51F7A03A500F9CBFB /* Main.storyboard */; };
@@ -42,6 +70,68 @@
 		7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTVerticalBlockView.m; sourceTree = "<group>"; };
 		7704DC021F7B788700C069FF /* QTViewFatory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTViewFatory.h; sourceTree = "<group>"; };
 		7704DC031F7B788700C069FF /* QTViewFatory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTViewFatory.m; sourceTree = "<group>"; };
+		7752A17E1F96094200D53D3B /* NSString+EKStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+EKStuff.h"; sourceTree = "<group>"; };
+		7752A1811F96094200D53D3B /* EKTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTree.m; sourceTree = "<group>"; };
+		7752A1821F96094200D53D3B /* EKTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTreeNode.m; sourceTree = "<group>"; };
+		7752A1831F96094200D53D3B /* EKTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKTree.h; sourceTree = "<group>"; };
+		7752A1841F96094200D53D3B /* EKTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKTreeNode.h; sourceTree = "<group>"; };
+		7752A1851F96094200D53D3B /* EKStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKStack.h; sourceTree = "<group>"; };
+		7752A1861F96094200D53D3B /* EKDeque.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKDeque.h; sourceTree = "<group>"; };
+		7752A1881F96094200D53D3B /* EKNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKNode.m; sourceTree = "<group>"; };
+		7752A1891F96094200D53D3B /* EKLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKLinkedList.h; sourceTree = "<group>"; };
+		7752A18A1F96094200D53D3B /* EKNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKNode.h; sourceTree = "<group>"; };
+		7752A18B1F96094200D53D3B /* EKLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKLinkedList.m; sourceTree = "<group>"; };
+		7752A18C1F96094200D53D3B /* EKQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKQueue.h; sourceTree = "<group>"; };
+		7752A18E1F96094200D53D3B /* EKGraph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKGraph.m; sourceTree = "<group>"; };
+		7752A18F1F96094200D53D3B /* EKVertex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKVertex.m; sourceTree = "<group>"; };
+		7752A1901F96094200D53D3B /* EKEdge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKEdge.m; sourceTree = "<group>"; };
+		7752A1911F96094200D53D3B /* EKGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKGraph.h; sourceTree = "<group>"; };
+		7752A1921F96094200D53D3B /* EKGraphPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EKGraphPicture.png; sourceTree = "<group>"; };
+		7752A1931F96094200D53D3B /* EKEdge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKEdge.h; sourceTree = "<group>"; };
+		7752A1941F96094200D53D3B /* EKTopsort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EKTopsort.png; sourceTree = "<group>"; };
+		7752A1951F96094200D53D3B /* EKVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKVertex.h; sourceTree = "<group>"; };
+		7752A1961F96094200D53D3B /* EKBHeap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKBHeap.m; sourceTree = "<group>"; };
+		7752A1981F96094200D53D3B /* EKBSTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKBSTree.m; sourceTree = "<group>"; };
+		7752A1991F96094200D53D3B /* EKBTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKBTreeNode.h; sourceTree = "<group>"; };
+		7752A19A1F96094200D53D3B /* EKBSTree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EKBSTree.png; sourceTree = "<group>"; };
+		7752A19B1F96094200D53D3B /* EKBTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKBTreeNode.m; sourceTree = "<group>"; };
+		7752A19C1F96094200D53D3B /* EKBSTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKBSTree.h; sourceTree = "<group>"; };
+		7752A19D1F96094200D53D3B /* EKStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKStack.m; sourceTree = "<group>"; };
+		7752A19E1F96094200D53D3B /* EKDeque.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKDeque.m; sourceTree = "<group>"; };
+		7752A19F1F96094200D53D3B /* EKQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKQueue.m; sourceTree = "<group>"; };
+		7752A1A11F96094200D53D3B /* EKBTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKBTree.h; sourceTree = "<group>"; };
+		7752A1A21F96094200D53D3B /* EKBTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKBTree.m; sourceTree = "<group>"; };
+		7752A1A41F96094200D53D3B /* EKAVLTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKAVLTreeNode.h; sourceTree = "<group>"; };
+		7752A1A51F96094200D53D3B /* EKAVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKAVLTree.h; sourceTree = "<group>"; };
+		7752A1A61F96094200D53D3B /* EKAVLTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKAVLTreeNode.m; sourceTree = "<group>"; };
+		7752A1A71F96094200D53D3B /* EKAVLTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKAVLTree.m; sourceTree = "<group>"; };
+		7752A1A81F96094200D53D3B /* EKBHeap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKBHeap.h; sourceTree = "<group>"; };
+		7752A1A91F96094200D53D3B /* EKRecursionStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKRecursionStuff.h; sourceTree = "<group>"; };
+		7752A1AA1F96094200D53D3B /* NSNumber+EKStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+EKStuff.h"; sourceTree = "<group>"; };
+		7752A1AB1F96094200D53D3B /* NSArray+EKStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+EKStuff.h"; sourceTree = "<group>"; };
+		7752A1AD1F96094200D53D3B /* JosephusProblem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JosephusProblem.h; sourceTree = "<group>"; };
+		7752A1AE1F96094200D53D3B /* ModuloBias.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuloBias.h; sourceTree = "<group>"; };
+		7752A1AF1F96094200D53D3B /* NSDictionary+EKStuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+EKStuff.m"; sourceTree = "<group>"; };
+		7752A1B11F96094200D53D3B /* NSNumber+EKComparisonForIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+EKComparisonForIOS.m"; sourceTree = "<group>"; };
+		7752A1B21F96094200D53D3B /* NSObject+EKComparisonForIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EKComparisonForIOS.h"; sourceTree = "<group>"; };
+		7752A1B31F96094200D53D3B /* NSNumber+EKComparisonForIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+EKComparisonForIOS.h"; sourceTree = "<group>"; };
+		7752A1B41F96094200D53D3B /* NSObject+EKComparisonForIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EKComparisonForIOS.m"; sourceTree = "<group>"; };
+		7752A1B51F96094200D53D3B /* EKRecursionStuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKRecursionStuff.m; sourceTree = "<group>"; };
+		7752A1B61F96094200D53D3B /* NSString+EKStuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+EKStuff.m"; sourceTree = "<group>"; };
+		7752A1B81F96094200D53D3B /* SSRadixNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRadixNode.h; sourceTree = "<group>"; };
+		7752A1B91F96094200D53D3B /* NSArray+EKSorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+EKSorting.h"; sourceTree = "<group>"; };
+		7752A1BA1F96094200D53D3B /* SSRadixNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRadixNode.m; sourceTree = "<group>"; };
+		7752A1BB1F96094200D53D3B /* NSArray+EKSorting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EKSorting.m"; sourceTree = "<group>"; };
+		7752A1BC1F96094200D53D3B /* NSNumber+EKStuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+EKStuff.m"; sourceTree = "<group>"; };
+		7752A1BE1F96094200D53D3B /* NSArray+Selection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Selection.m"; sourceTree = "<group>"; };
+		7752A1BF1F96094200D53D3B /* NSArray+Selection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Selection.h"; sourceTree = "<group>"; };
+		7752A1C01F96094200D53D3B /* NSArray+EKStuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EKStuff.m"; sourceTree = "<group>"; };
+		7752A1C21F96094200D53D3B /* NSArray+EKGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+EKGeometry.h"; sourceTree = "<group>"; };
+		7752A1C31F96094200D53D3B /* EKALocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKALocation.m; sourceTree = "<group>"; };
+		7752A1C41F96094200D53D3B /* NSArray+EKGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EKGeometry.m"; sourceTree = "<group>"; };
+		7752A1C51F96094200D53D3B /* EKGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKGeometry.h; sourceTree = "<group>"; };
+		7752A1C61F96094200D53D3B /* EKALocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKALocation.h; sourceTree = "<group>"; };
+		7752A1C71F96094200D53D3B /* NSDictionary+EKStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+EKStuff.h"; sourceTree = "<group>"; };
 		77B909BC1F7A03A500F9CBFB /* CrackQianTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrackQianTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B909BF1F7A03A500F9CBFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77B909C01F7A03A500F9CBFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +192,171 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7752A17D1F96094200D53D3B /* EKAlgorithms */ = {
+			isa = PBXGroup;
+			children = (
+				7752A17E1F96094200D53D3B /* NSString+EKStuff.h */,
+				7752A17F1F96094200D53D3B /* Data Structures */,
+				7752A1A91F96094200D53D3B /* EKRecursionStuff.h */,
+				7752A1AA1F96094200D53D3B /* NSNumber+EKStuff.h */,
+				7752A1AB1F96094200D53D3B /* NSArray+EKStuff.h */,
+				7752A1AC1F96094200D53D3B /* Problems */,
+				7752A1AF1F96094200D53D3B /* NSDictionary+EKStuff.m */,
+				7752A1B01F96094200D53D3B /* iOS */,
+				7752A1B51F96094200D53D3B /* EKRecursionStuff.m */,
+				7752A1B61F96094200D53D3B /* NSString+EKStuff.m */,
+				7752A1B71F96094200D53D3B /* Sorting */,
+				7752A1BC1F96094200D53D3B /* NSNumber+EKStuff.m */,
+				7752A1BD1F96094200D53D3B /* Selection */,
+				7752A1C01F96094200D53D3B /* NSArray+EKStuff.m */,
+				7752A1C11F96094200D53D3B /* Geometry */,
+				7752A1C71F96094200D53D3B /* NSDictionary+EKStuff.h */,
+			);
+			path = EKAlgorithms;
+			sourceTree = "<group>";
+		};
+		7752A17F1F96094200D53D3B /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1801F96094200D53D3B /* Tree */,
+				7752A1851F96094200D53D3B /* EKStack.h */,
+				7752A1861F96094200D53D3B /* EKDeque.h */,
+				7752A1871F96094200D53D3B /* LinkedList */,
+				7752A18C1F96094200D53D3B /* EKQueue.h */,
+				7752A18D1F96094200D53D3B /* Graph */,
+				7752A1961F96094200D53D3B /* EKBHeap.m */,
+				7752A1971F96094200D53D3B /* BinarySearchTree */,
+				7752A19D1F96094200D53D3B /* EKStack.m */,
+				7752A19E1F96094200D53D3B /* EKDeque.m */,
+				7752A19F1F96094200D53D3B /* EKQueue.m */,
+				7752A1A01F96094200D53D3B /* BinaryTree */,
+				7752A1A31F96094200D53D3B /* AVLTree */,
+				7752A1A81F96094200D53D3B /* EKBHeap.h */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		7752A1801F96094200D53D3B /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1811F96094200D53D3B /* EKTree.m */,
+				7752A1821F96094200D53D3B /* EKTreeNode.m */,
+				7752A1831F96094200D53D3B /* EKTree.h */,
+				7752A1841F96094200D53D3B /* EKTreeNode.h */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		7752A1871F96094200D53D3B /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1881F96094200D53D3B /* EKNode.m */,
+				7752A1891F96094200D53D3B /* EKLinkedList.h */,
+				7752A18A1F96094200D53D3B /* EKNode.h */,
+				7752A18B1F96094200D53D3B /* EKLinkedList.m */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		7752A18D1F96094200D53D3B /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				7752A18E1F96094200D53D3B /* EKGraph.m */,
+				7752A18F1F96094200D53D3B /* EKVertex.m */,
+				7752A1901F96094200D53D3B /* EKEdge.m */,
+				7752A1911F96094200D53D3B /* EKGraph.h */,
+				7752A1921F96094200D53D3B /* EKGraphPicture.png */,
+				7752A1931F96094200D53D3B /* EKEdge.h */,
+				7752A1941F96094200D53D3B /* EKTopsort.png */,
+				7752A1951F96094200D53D3B /* EKVertex.h */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		7752A1971F96094200D53D3B /* BinarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1981F96094200D53D3B /* EKBSTree.m */,
+				7752A1991F96094200D53D3B /* EKBTreeNode.h */,
+				7752A19A1F96094200D53D3B /* EKBSTree.png */,
+				7752A19B1F96094200D53D3B /* EKBTreeNode.m */,
+				7752A19C1F96094200D53D3B /* EKBSTree.h */,
+			);
+			path = BinarySearchTree;
+			sourceTree = "<group>";
+		};
+		7752A1A01F96094200D53D3B /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1A11F96094200D53D3B /* EKBTree.h */,
+				7752A1A21F96094200D53D3B /* EKBTree.m */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
+		7752A1A31F96094200D53D3B /* AVLTree */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1A41F96094200D53D3B /* EKAVLTreeNode.h */,
+				7752A1A51F96094200D53D3B /* EKAVLTree.h */,
+				7752A1A61F96094200D53D3B /* EKAVLTreeNode.m */,
+				7752A1A71F96094200D53D3B /* EKAVLTree.m */,
+			);
+			path = AVLTree;
+			sourceTree = "<group>";
+		};
+		7752A1AC1F96094200D53D3B /* Problems */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1AD1F96094200D53D3B /* JosephusProblem.h */,
+				7752A1AE1F96094200D53D3B /* ModuloBias.h */,
+			);
+			path = Problems;
+			sourceTree = "<group>";
+		};
+		7752A1B01F96094200D53D3B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1B11F96094200D53D3B /* NSNumber+EKComparisonForIOS.m */,
+				7752A1B21F96094200D53D3B /* NSObject+EKComparisonForIOS.h */,
+				7752A1B31F96094200D53D3B /* NSNumber+EKComparisonForIOS.h */,
+				7752A1B41F96094200D53D3B /* NSObject+EKComparisonForIOS.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		7752A1B71F96094200D53D3B /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1B81F96094200D53D3B /* SSRadixNode.h */,
+				7752A1B91F96094200D53D3B /* NSArray+EKSorting.h */,
+				7752A1BA1F96094200D53D3B /* SSRadixNode.m */,
+				7752A1BB1F96094200D53D3B /* NSArray+EKSorting.m */,
+			);
+			path = Sorting;
+			sourceTree = "<group>";
+		};
+		7752A1BD1F96094200D53D3B /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1BE1F96094200D53D3B /* NSArray+Selection.m */,
+				7752A1BF1F96094200D53D3B /* NSArray+Selection.h */,
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
+		7752A1C11F96094200D53D3B /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				7752A1C21F96094200D53D3B /* NSArray+EKGeometry.h */,
+				7752A1C31F96094200D53D3B /* EKALocation.m */,
+				7752A1C41F96094200D53D3B /* NSArray+EKGeometry.m */,
+				7752A1C51F96094200D53D3B /* EKGeometry.h */,
+				7752A1C61F96094200D53D3B /* EKALocation.h */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
 		77B909B31F7A03A500F9CBFB = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +376,7 @@
 		77B909BE1F7A03A500F9CBFB /* CrackQianTang */ = {
 			isa = PBXGroup;
 			children = (
+				7752A17D1F96094200D53D3B /* EKAlgorithms */,
 				7704DBF21F7B773800C069FF /* View */,
 				77B909D81F7A06D200F9CBFB /* GameEngine */,
 				77B909BF1F7A03A500F9CBFB /* AppDelegate.h */,
@@ -228,6 +484,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7752A1C81F960DC700D53D3B /* EKTree.m in Sources */,
+				7752A1C91F960DC700D53D3B /* EKTreeNode.m in Sources */,
+				7752A1CA1F960DC700D53D3B /* EKNode.m in Sources */,
+				7752A1CB1F960DC700D53D3B /* EKLinkedList.m in Sources */,
+				7752A1CC1F960DC700D53D3B /* EKGraph.m in Sources */,
+				7752A1CD1F960DC700D53D3B /* EKVertex.m in Sources */,
+				7752A1CE1F960DC700D53D3B /* EKEdge.m in Sources */,
+				7752A1CF1F960DC700D53D3B /* EKBHeap.m in Sources */,
+				7752A1D01F960DC700D53D3B /* EKBSTree.m in Sources */,
+				7752A1D11F960DC700D53D3B /* EKBTreeNode.m in Sources */,
+				7752A1D21F960DC700D53D3B /* EKStack.m in Sources */,
+				7752A1D31F960DC700D53D3B /* EKDeque.m in Sources */,
+				7752A1D41F960DC700D53D3B /* EKQueue.m in Sources */,
+				7752A1D51F960DC700D53D3B /* EKBTree.m in Sources */,
+				7752A1D61F960DC700D53D3B /* EKAVLTreeNode.m in Sources */,
+				7752A1D71F960DC700D53D3B /* EKAVLTree.m in Sources */,
+				7752A1D81F960DC700D53D3B /* NSDictionary+EKStuff.m in Sources */,
+				7752A1D91F960DC700D53D3B /* NSNumber+EKComparisonForIOS.m in Sources */,
+				7752A1DA1F960DC700D53D3B /* NSObject+EKComparisonForIOS.m in Sources */,
+				7752A1DB1F960DC700D53D3B /* EKRecursionStuff.m in Sources */,
+				7752A1DC1F960DC700D53D3B /* NSString+EKStuff.m in Sources */,
+				7752A1DD1F960DC700D53D3B /* SSRadixNode.m in Sources */,
+				7752A1DE1F960DC700D53D3B /* NSArray+EKSorting.m in Sources */,
+				7752A1DF1F960DC700D53D3B /* NSNumber+EKStuff.m in Sources */,
+				7752A1E01F960DC700D53D3B /* NSArray+Selection.m in Sources */,
+				7752A1E11F960DC700D53D3B /* NSArray+EKStuff.m in Sources */,
+				7752A1E21F960DC700D53D3B /* EKALocation.m in Sources */,
+				7752A1E31F960DC700D53D3B /* NSArray+EKGeometry.m in Sources */,
 				77B909C41F7A03A500F9CBFB /* ViewController.m in Sources */,
 				7704DBF51F7B775A00C069FF /* QTElementToView.m in Sources */,
 				77B909E41F7A20AA00F9CBFB /* QTFishHeader.m in Sources */,

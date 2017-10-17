@@ -48,6 +48,11 @@
     }
 }
 
+-(void)crack
+{
+    
+}
+
 -(QTGameMap*)gameMap
 {
     return _gameMap;
