@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CrackQianTang/ViewController.m"
-            timestampString = "530024487.534045"
+            filePath = "CrackQianTang/GameEngine/QTGameEngine.m"
+            timestampString = "530025045.94241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-mapEngine:crackSuccess:"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-crackSuccess"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

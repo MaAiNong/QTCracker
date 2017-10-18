@@ -93,9 +93,9 @@
         }
         [self.mapDeque removeLastObject];
     }
-    if ([self.mapDeque isEmpty]) {
-        [self crackFailed];
-    }
+//    if ([self.mapDeque isEmpty]) {
+//        [self crackFailed];
+//    }
     return nil;
 }
 

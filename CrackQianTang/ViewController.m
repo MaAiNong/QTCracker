@@ -35,7 +35,10 @@
     
     [self.gameBoard drawGameWithMap:[self.gameEngine gameMap]];
     
-    [[self gameEngine] crack];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[self gameEngine] crack];
+    });
+    
     
 }
 
@@ -55,18 +58,17 @@
 
 -(void)mapEngine:(QTGameEngine *)engine crackSuccess:(EKDeque *)resultQueue
 {
-    QTGameMap* map = [resultQueue removeFirstObject];
-
-    while (map) {
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            [self.gameBoard drawGameWithMap:map];
-            
-            
-        }];
+    
+    for (QTGameMap* map in [resultQueue allObjectsFromDeque]) {
         
-        map = [resultQueue removeFirstObject];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.gameBoard drawGameWithMap:map];
+        });
+        
     }
+
+    
+    
 }
 
 

@@ -44,6 +44,11 @@
 
 -(void)parseGameMap:(QTGameMap*)map
 {
+    
+    for (UIView* view in [self subviews]) {
+        [view removeFromSuperview];
+    }
+    
     NSEnumerator* enumerator = [map enumerator];
     
     QTGameElement* elment = [enumerator nextObject];
