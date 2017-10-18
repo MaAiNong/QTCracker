@@ -16,5 +16,6 @@
 - (BOOL)isEmpty;
 - (void)clear;
 - (NSArray *)allObjectsFromQueue;
+- (NSArray *)quickAllObjects;
 
 @end

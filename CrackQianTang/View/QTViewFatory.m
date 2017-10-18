@@ -23,7 +23,7 @@
     int x = element.positionX;
     int y = element.positionY;
     int count = element.blockNumber;
-    int boardTime = 6;
+    int boardTime = QT_BOARD_COUNT;
     CGFloat meta = CGRectGetWidth(frame)/6;
     
     if ([element isKindOfClass:[QTFishBlocker class]])

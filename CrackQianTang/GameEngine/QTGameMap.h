@@ -9,8 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "QTGameElement.h"
 #import "EKQueue.h"
+#import "QTFishHeader.h"
 @interface QTGameMap : EKQueue
--(NSEnumerator*)enumerator;
+
 -(QTGameMap*)addGameElement:(QTGameElement*)element;
+-(EKQueue*)allMoves;
+-(QTFishHeader*)getFinshHeader;
+-(BOOL)isEqualToMap:(QTGameMap*)map;
+-(void)sortByIdentify;
+
+-(NSEnumerator*)enumerator;
+-(BOOL)canFishMoveOut;
 -(BOOL)isValid;
+
+-(QTGameMap*)shadowCopy;
+-(QTGameMap*)replaceElement:(QTGameElement*)element;
+
 @end

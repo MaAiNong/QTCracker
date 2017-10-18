@@ -10,14 +10,20 @@
 #import "QTIdentifyGenerator.h"
 #import "QTGameMap.h"
 #import "QTGameElementFactory.h"
-
+#import "EKStack.h"
+#import "EKDeque.h"
 @interface QTGameEngine()
 @property(nonatomic,strong)QTGameMap* gameMap;
+@property(nonatomic,strong)EKDeque* mapDeque;
+@property(nonatomic,strong)EKQueue* usedMap;
 @end
 
 @implementation QTGameEngine
 -(void)start
 {
+    self.mapDeque = [[EKDeque alloc] init];
+    self.usedMap = [[EKQueue alloc] init];
+    
     [[QTIdentifyGenerator sharedInstance] reset];
     
     //初始化map
@@ -48,9 +54,65 @@
     }
 }
 
--(void)crack
+-(BOOL)isMapUsed:(QTGameMap*)map
 {
+    for (QTGameMap* usedMap in [self.usedMap allObjectsFromQueue]) {
+        if ([usedMap isEqualToMap:map]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+-(QTGameMap*)crack;
+{
+   [self crackMap:_gameMap];
+   return _gameMap;
+}
+
+
+
+-(QTGameMap*)crackMap:(QTGameMap*)map
+{
+    [self.mapDeque insertObjectToBack:map];
+    [self.usedMap insertObject:map];
     
+    if ([map canFishMoveOut]) {
+        NSLog(@"TODO://move out");
+        [self crackSuccess];
+        return map;
+    }
+    else
+    {
+        EKQueue* maps = [map allMoves];
+        while (![maps isEmpty]) {
+            QTGameMap* nextMap = [maps removeFirstObject];
+            if (![self isMapUsed:nextMap]) {
+                [self crackMap:nextMap];
+            }
+        }
+        [self.mapDeque removeLastObject];
+    }
+    if ([self.mapDeque isEmpty]) {
+        [self crackFailed];
+    }
+    return nil;
+}
+
+-(void)crackSuccess
+{
+    NSLog(@"crackSuccess");
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(mapEngine:crackSuccess:)]) {
+        [self.delegate mapEngine:self crackSuccess:self.mapDeque];
+    }
+}
+
+-(void)crackFailed
+{
+    NSLog(@"crackFailed");
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(mapEngine:crackFailed:)]) {
+        [self.delegate mapEngine:self crackFailed:nil];
+    }
 }
 
 -(QTGameMap*)gameMap

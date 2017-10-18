@@ -71,6 +71,11 @@
     [self.queueArray removeAllObjects];
 }
 
+- (NSArray *)quickAllObjects
+{
+    return self.queueArray;
+}
+
 - (NSArray *)allObjectsFromQueue
 {
     NSMutableArray *buffer = [@[] mutableCopy];

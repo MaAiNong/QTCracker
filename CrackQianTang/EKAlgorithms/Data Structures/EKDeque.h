@@ -22,5 +22,6 @@
 - (BOOL)isEmpty;
 - (void)clear;
 - (NSArray *)allObjectsFromDeque;
+- (NSArray *)quickAllObjects;
 
 @end

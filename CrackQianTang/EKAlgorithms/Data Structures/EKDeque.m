@@ -99,6 +99,12 @@
     [self.dequeArray removeAllObjects];
 }
 
+- (NSArray *)quickAllObjects
+{
+    return self.dequeArray;
+}
+
+
 - (NSArray *)allObjectsFromDeque
 {
     NSMutableArray *buffer = [@[] mutableCopy];

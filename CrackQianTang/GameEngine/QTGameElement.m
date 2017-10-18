@@ -38,6 +38,26 @@
     return YES;
 }
 
+-(BOOL)isEqualToElement:(QTGameElement*)element
+{
+    if (element.identity == self.identity&&element.positionX == self.positionX&&element.positionY == self.positionY)
+        return YES;
+    return NO;
+}
+
+-(QTGameElement*)deepCopy
+{
+    QTGameElement* element = [[QTGameElement alloc] init];
+    
+    element.identity = self.identity;
+    element.blockNumber = self.blockNumber;
+    element.direction = self.direction;
+    element.positionX = self.positionX;
+    element.positionY = self.positionY;
+    
+    return element;
+}
+
 -(NSString*)description
 {
     NSString* des = [NSString stringWithFormat:@"identify = %@\n blockNumer=%@\n direction=%@\n posionX = %@\n positionY=%@\n",@(self.identity),@(self.blockNumber),@(self.direction),@(self.positionX),@(self.positionY)];
