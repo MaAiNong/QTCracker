@@ -20,4 +20,20 @@
     }
     return self;
 }
+
+
+-(QTGameElement*)deepCopy
+{
+    QTFishHeader* element = [[QTFishHeader alloc] init];
+    
+    element.identity = self.identity;
+    element.blockNumber = self.blockNumber;
+    element.direction = self.direction;
+    element.positionX = self.positionX;
+    element.positionY = self.positionY;
+    
+    return element;
+}
+
+
 @end
