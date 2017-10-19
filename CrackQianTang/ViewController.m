@@ -70,8 +70,10 @@
 -(void)mapEngine:(QTGameEngine *)engine crackSuccess:(EKDeque *)resultQueue
 {
     NSTimeInterval endTime = [NSDate timeIntervalSinceReferenceDate];
-    NSLog(@"crack success 耗时 %f 秒 %f 分钟",endTime-_startTime,(endTime-_startTime)/60);
     NSArray* maps = [resultQueue allObjectsFromDeque];
+    
+    NSLog(@"crack success 耗时 %f 秒 %f 分钟 %lu 步骤",endTime-_startTime,(endTime-_startTime)/60,(unsigned long)maps.count);
+    
     for (QTGameMap* map in maps) {
     
         dispatch_async(self.uiQueue, ^{

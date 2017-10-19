@@ -77,18 +77,18 @@
 //    [self.usedMap insertObject:_gameMap];
     
     if([_gameMap canFishMoveOut]) {
-        
+
         [self noNeedToCrack];
         return _gameMap;
     }
     
 //  广度遍历
-//    EKQueue* tmpQueue = [[EKQueue alloc] init];
-//    [tmpQueue insertObject:_gameMap];
-//    [self BFSCrackMap:tmpQueue];
+    EKQueue* tmpQueue = [[EKQueue alloc] init];
+    [tmpQueue insertObject:_gameMap];
+    [self BFSCrackMap:tmpQueue];
 //  深度遍历
-    [self DFSCrackMap:_gameMap];
-    
+//    [self DFSCrackMap:_gameMap];
+//---------------------------------------------
     if ([self.mapDeque isEmpty])
     {
         [self crackFailed];
@@ -99,6 +99,7 @@
 
 -(QTGameMap*)BFSCrackMap:(EKQueue*)maps
 {
+    NSLog(@"本层需要处理的队列数据为 %lu",(unsigned long)[maps quickAllObjects].count);
     if (![maps isEmpty])
     {
         EKQueue* newQueue = [[EKQueue alloc] init];
@@ -111,7 +112,6 @@
             }
             else
             {
-                
                 EKQueue* newMoves = [map allMoves];
                 
                 for (QTGameMap* tmpMap in [newMoves quickAllObjects])
@@ -132,6 +132,7 @@
 
 -(void)handleBFSMap:(QTGameMap*)map
 {
+    
     [self.mapDeque clear];
     [self.mapDeque insertObjectToFront:map];
     QTGameMap* tmpMap = map.fatherMap;
