@@ -7,6 +7,7 @@
 //
 
 #import "QTGameMap.h"
+#import "QTMapSingleton.h"
 @implementation QTGameMap
 
 -(id)init
@@ -140,6 +141,7 @@
 -(QTGameMap*)shadowCopy
 {
     QTGameMap* map = [[QTGameMap alloc] init];
+    map.delegate = self.delegate;
     for (QTGameElement* element in [self quickAllObjects]) {
         [map addGameElement:element];
     }
@@ -150,6 +152,7 @@
 -(QTGameMap*)replaceElement:(QTGameElement*)element
 {
     QTGameMap* map = [[QTGameMap alloc] init];
+    map.delegate = self.delegate;
     QTGameElement* first = [self removeFirstObject];
     while (first) {
         if (first.identity == element.identity)
@@ -237,9 +240,27 @@
         NSArray* canMoves = [self getElementMoves:element];
         for (QTGameElement* newElement in canMoves) {
             
+            BOOL mapValid = YES;
+            
             QTGameMap* map = [self shadowCopy];
+            map.delegate = self.delegate;
             map = [map replaceElement:newElement];
-            [queue insertObject:map];
+            if (self.delegate&&[self.delegate respondsToSelector:@selector(isMapValid:)]) {
+                mapValid = [self.delegate isMapValid:map];
+            }
+            if (mapValid) {
+                
+                mapValid = ![[QTMapSingleton sharedSingleton] isMapExist:map];
+                if(mapValid)
+                {
+                    [[QTMapSingleton sharedSingleton] addMap:map];
+                    [queue insertObject:map];
+                }
+                else
+                {
+//                    NSLog(@"ex");
+                }
+            }
             
         }
     }

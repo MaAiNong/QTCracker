@@ -10,5 +10,8 @@
 #import "QTBaseView.h"
 #import "QTGameElement.h"
 @interface QTViewFatory : NSObject
+
 +(QTBaseView*)generateBaseViewByElement:(QTGameElement*)element frame:(CGRect)frame;
++(CGRect)calculateViewRectByElement:(QTGameElement*)element frame:(CGRect)frame;
+
 @end

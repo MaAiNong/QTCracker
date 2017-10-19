@@ -10,6 +10,6 @@
 #import "QTGameElement.h"
 @interface QTBaseView : UIView
 
-
+@property(nonatomic,assign)int identify;
 
 @end

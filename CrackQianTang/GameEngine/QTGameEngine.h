@@ -15,7 +15,7 @@
 -(void)mapEngine:(QTGameEngine*)engine crackFailed:(EKDeque*)resultQueue;
 @end
 
-@interface QTGameEngine : NSObject
+@interface QTGameEngine : NSObject<QTGameMapDelegate>
 
 @property(nonatomic,weak)id<QTGameEngineDelegate>delegate;
 

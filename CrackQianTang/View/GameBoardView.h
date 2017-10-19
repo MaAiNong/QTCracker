@@ -11,5 +11,6 @@
 @interface GameBoardView : UIView
 
 -(void)drawGameWithMap:(QTGameMap*)map;
+-(void)changeGameMap:(QTGameMap*)map;
 
 @end

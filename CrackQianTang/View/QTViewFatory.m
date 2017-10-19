@@ -24,7 +24,7 @@
     int y = element.positionY;
     int count = element.blockNumber;
     int boardTime = QT_BOARD_COUNT;
-    CGFloat meta = CGRectGetWidth(frame)/6;
+    CGFloat meta = CGRectGetWidth(frame)/boardTime;
     
     if ([element isKindOfClass:[QTFishBlocker class]])
     {
@@ -38,6 +38,7 @@
             
             [view.layer setBorderColor:[UIColor blackColor].CGColor];
             [view.layer setBorderWidth:1.0f];
+            view.identify = element.identity;
             
             return view;
         }
@@ -48,6 +49,8 @@
             [view setBackgroundColor:[UIColor yellowColor]];
             [view.layer setBorderColor:[UIColor blackColor].CGColor];
             [view.layer setBorderWidth:1.0f];
+            view.identify = element.identity;
+            
             return view;
         }
     }
@@ -58,10 +61,39 @@
         [view setBackgroundColor:[UIColor redColor]];
         [view.layer setBorderColor:[UIColor blackColor].CGColor];
         [view.layer setBorderWidth:1.0f];
+        view.identify = element.identity;
+        
         return view;
     }
     
     return nil;
+}
+
++(CGRect)calculateViewRectByElement:(QTGameElement*)element frame:(CGRect)frame
+{
+    int x = element.positionX;
+    int y = element.positionY;
+    int count = element.blockNumber;
+    int boardTime = QT_BOARD_COUNT;
+    CGFloat meta = CGRectGetWidth(frame)/boardTime;
+    
+    if ([element isKindOfClass:[QTFishBlocker class]])
+    {
+        if (ElementDirection_Horizon == element.direction)
+        {
+            return CGRectMake(x*meta, y*meta, count*meta, 1*meta);
+        }
+        else
+        {
+            return  CGRectMake(x*meta, y*meta,1*meta,count*meta);
+        }
+    }
+    else
+    {
+        return CGRectMake(x*meta, y*meta, count*meta, 1*meta);
+    }
+    
+    return CGRectZero;
 }
 
 @end

@@ -67,9 +67,40 @@
     
 }
 
+-(UIView*)getViewByElement:(QTGameElement*)element
+{
+    for (UIView* subview in [self subviews]) {
+        if ([subview isKindOfClass:[QTBaseView class]]) {
+            if(((QTBaseView*)subview).identify == element.identity)
+            {
+                return subview;
+            }
+        }
+    }
+    return nil;
+}
+
 -(void)changeGameMap:(QTGameMap*)map
 {
-    //    TODO:
+    NSEnumerator* enumerator = [map enumerator];
+    
+    QTGameElement* elment = [enumerator nextObject];
+    
+    while (elment) {
+        
+        UIView* view = [self getViewByElement:elment];
+        
+        if (!view) {
+            view = [QTViewFatory generateBaseViewByElement:elment frame:self.bounds];
+            [self addSubview:view];
+        }
+        else
+        {
+            view.frame = [QTViewFatory calculateViewRectByElement:elment frame:self.bounds];
+        }
+        
+        elment = [enumerator nextObject];
+    }
 }
 
 -(void)layoutSubviews

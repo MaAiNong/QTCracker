@@ -10,7 +10,16 @@
 #import "QTGameElement.h"
 #import "EKQueue.h"
 #import "QTFishHeader.h"
+
+@class QTGameMap;
+
+@protocol QTGameMapDelegate <NSObject>
+-(BOOL)isMapValid:(QTGameMap*)map;
+@end
+
 @interface QTGameMap : EKQueue
+
+@property(nonatomic,weak)id<QTGameMapDelegate> delegate;
 
 -(QTGameMap*)addGameElement:(QTGameElement*)element;
 -(EKQueue*)allMoves;

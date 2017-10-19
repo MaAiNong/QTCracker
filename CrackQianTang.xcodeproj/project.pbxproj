@@ -55,6 +55,7 @@
 		77B909E71F7A217600F9CBFB /* QTFishBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E61F7A217600F9CBFB /* QTFishBlocker.m */; };
 		77B909EA1F7A21B100F9CBFB /* QTGameElementFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E91F7A21B100F9CBFB /* QTGameElementFactory.m */; };
 		77B909ED1F7A266600F9CBFB /* QTIdentifyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */; };
+		77D676531F984B6F009FFD27 /* QTMapSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D676511F984B6F009FFD27 /* QTMapSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,8 @@
 		77B909E91F7A21B100F9CBFB /* QTGameElementFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTGameElementFactory.m; sourceTree = "<group>"; };
 		77B909EB1F7A266600F9CBFB /* QTIdentifyGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTIdentifyGenerator.h; sourceTree = "<group>"; };
 		77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTIdentifyGenerator.m; sourceTree = "<group>"; };
+		77D6764F1F984B6F009FFD27 /* QTMapSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMapSingleton.h; sourceTree = "<group>"; };
+		77D676511F984B6F009FFD27 /* QTMapSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMapSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +412,8 @@
 				77B909E31F7A20AA00F9CBFB /* QTFishHeader.m */,
 				77B909E51F7A217600F9CBFB /* QTFishBlocker.h */,
 				77B909E61F7A217600F9CBFB /* QTFishBlocker.m */,
+				77D6764F1F984B6F009FFD27 /* QTMapSingleton.h */,
+				77D676511F984B6F009FFD27 /* QTMapSingleton.m */,
 			);
 			path = GameEngine;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				77B909C41F7A03A500F9CBFB /* ViewController.m in Sources */,
 				7704DBF51F7B775A00C069FF /* QTElementToView.m in Sources */,
 				77B909E41F7A20AA00F9CBFB /* QTFishHeader.m in Sources */,
+				77D676531F984B6F009FFD27 /* QTMapSingleton.m in Sources */,
 				77B909ED1F7A266600F9CBFB /* QTIdentifyGenerator.m in Sources */,
 				77B909DB1F7A1A0700F9CBFB /* QTGameEngine.m in Sources */,
 				7704DC011F7B785C00C069FF /* QTVerticalBlockView.m in Sources */,

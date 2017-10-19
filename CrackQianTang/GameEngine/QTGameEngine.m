@@ -12,6 +12,7 @@
 #import "QTGameElementFactory.h"
 #import "EKStack.h"
 #import "EKDeque.h"
+#import "QTMapSingleton.h"
 @interface QTGameEngine()
 @property(nonatomic,strong)QTGameMap* gameMap;
 @property(nonatomic,strong)EKDeque* mapDeque;
@@ -25,9 +26,11 @@
     self.usedMap = [[EKQueue alloc] init];
     
     [[QTIdentifyGenerator sharedInstance] reset];
+    [[QTMapSingleton sharedSingleton] clearAll];
     
     //初始化map
     QTGameMap* map = [[QTGameMap alloc] init];
+    map.delegate = self;
     //第121局
     //头部
     [map addGameElement:HEADER(1, 2)];
@@ -56,7 +59,7 @@
 
 -(BOOL)isMapUsed:(QTGameMap*)map
 {
-    for (QTGameMap* usedMap in [self.usedMap allObjectsFromQueue]) {
+    for (QTGameMap* usedMap in [self.usedMap quickAllObjects]) {
         if ([usedMap isEqualToMap:map]) {
             return YES;
         }
@@ -72,31 +75,45 @@
 
 
 
--(QTGameMap*)crackMap:(QTGameMap*)map
-{
+-(BOOL)crackMap:(QTGameMap*)map
+{//深度遍历算法
     [self.mapDeque insertObjectToBack:map];
     [self.usedMap insertObject:map];
     
     if ([map canFishMoveOut]) {
-        NSLog(@"TODO://move out");
         [self crackSuccess];
-        return map;
+        return YES;
     }
     else
     {
         EKQueue* maps = [map allMoves];
-        while (![maps isEmpty]) {
-            QTGameMap* nextMap = [maps removeFirstObject];
-            if (![self isMapUsed:nextMap]) {
-                [self crackMap:nextMap];
+        if (![maps isEmpty]) {
+            while (![maps isEmpty]) {
+                QTGameMap* nextMap = [maps removeFirstObject];
+                if (![self isMapUsed:nextMap]) {
+                    BOOL crack = [self crackMap:nextMap];
+                    if(crack)
+                    {
+                        return crack;
+                    }
+                    else
+                    {
+                        [self.mapDeque removeLastObject];
+                    }
+                }
             }
         }
-        [self.mapDeque removeLastObject];
+        else
+        {
+            [self.mapDeque removeLastObject];
+        }
+        return NO;
     }
-//    if ([self.mapDeque isEmpty]) {
-//        [self crackFailed];
-//    }
-    return nil;
+}
+
+-(BOOL)isMapValid:(QTGameMap *)map
+{
+    return ![self isMapUsed:map];
 }
 
 -(void)crackSuccess

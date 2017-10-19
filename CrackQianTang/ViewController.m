@@ -13,6 +13,8 @@
 @interface ViewController ()<QTGameEngineDelegate>
 @property(nonatomic,strong)GameBoardView* gameBoard;
 @property(nonatomic,strong)QTGameEngine* gameEngine;
+@property(nonatomic,strong)dispatch_queue_t crackQueue;
+@property(nonatomic,strong)dispatch_queue_t uiQueue;
 @end
 
 @implementation ViewController
@@ -35,10 +37,13 @@
     
     [self.gameBoard drawGameWithMap:[self.gameEngine gameMap]];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [[self gameEngine] crack];
-    });
+    self.crackQueue = dispatch_queue_create("com.man.sb", DISPATCH_QUEUE_SERIAL);
+    self.uiQueue = dispatch_queue_create("com.man.ui", DISPATCH_QUEUE_SERIAL);
     
+    
+    dispatch_async(self.crackQueue, ^{
+        [self.gameEngine crack];
+    });
     
 }
 
@@ -58,15 +63,16 @@
 
 -(void)mapEngine:(QTGameEngine *)engine crackSuccess:(EKDeque *)resultQueue
 {
+    NSArray* maps = [resultQueue allObjectsFromDeque];
+    for (QTGameMap* map in maps) {
     
-    for (QTGameMap* map in [resultQueue allObjectsFromDeque]) {
-        
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            sleep(1);
+        dispatch_async(self.uiQueue, ^{
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.gameBoard drawGameWithMap:map];
+                [UIView animateWithDuration:0.3 animations:^{
+                    [self.gameBoard changeGameMap:map];
+                }];
             });
+            sleep(1);
         });
         
     }
