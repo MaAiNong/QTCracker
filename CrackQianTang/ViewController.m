@@ -41,7 +41,7 @@
     
     self.crackQueue = dispatch_queue_create("com.man.sb", DISPATCH_QUEUE_SERIAL);
     self.uiQueue = dispatch_queue_create("com.man.ui", DISPATCH_QUEUE_SERIAL);
-    
+    [self mapEngine:nil noNeedToCrack:nil];
     
     dispatch_async(self.crackQueue, ^{
         _startTime = [NSDate timeIntervalSinceReferenceDate];
@@ -58,16 +58,20 @@
 }
 
 #pragma mark --- QTGameEngineDelegate
+-(void)mapEngine:(QTGameEngine *)engine noNeedToCrack:(NSDictionary *)message
+{
+    NSLog(@"no need to crack");
+}
 
 -(void)mapEngine:(QTGameEngine *)engine crackFailed:(EKDeque *)resultQueue
 {
-    
+    NSLog(@"failed to crack");
 }
 
 -(void)mapEngine:(QTGameEngine *)engine crackSuccess:(EKDeque *)resultQueue
 {
     NSTimeInterval endTime = [NSDate timeIntervalSinceReferenceDate];
-    NSLog(@"耗时 %f 秒 %f 分钟",endTime-_startTime,(endTime-_startTime)/60);
+    NSLog(@"crack success 耗时 %f 秒 %f 分钟",endTime-_startTime,(endTime-_startTime)/60);
     NSArray* maps = [resultQueue allObjectsFromDeque];
     for (QTGameMap* map in maps) {
     
