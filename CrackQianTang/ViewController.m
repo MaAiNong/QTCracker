@@ -18,7 +18,9 @@
 @end
 
 @implementation ViewController
-
+{
+    NSTimeInterval _startTime;
+}
 - (void)viewDidLoad {
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [super viewDidLoad];
@@ -42,6 +44,7 @@
     
     
     dispatch_async(self.crackQueue, ^{
+        _startTime = [NSDate timeIntervalSinceReferenceDate];
         [self.gameEngine crack];
     });
     
@@ -63,6 +66,8 @@
 
 -(void)mapEngine:(QTGameEngine *)engine crackSuccess:(EKDeque *)resultQueue
 {
+    NSTimeInterval endTime = [NSDate timeIntervalSinceReferenceDate];
+    NSLog(@"耗时 %f 秒 %f 分钟",endTime-_startTime,(endTime-_startTime)/60);
     NSArray* maps = [resultQueue allObjectsFromDeque];
     for (QTGameMap* map in maps) {
     

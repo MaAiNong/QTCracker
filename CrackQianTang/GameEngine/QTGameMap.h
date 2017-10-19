@@ -20,6 +20,7 @@
 @interface QTGameMap : EKQueue
 
 @property(nonatomic,weak)id<QTGameMapDelegate> delegate;
+@property(nonatomic,weak)QTGameMap* fatherMap;//广度优先算法里面有用
 
 -(QTGameMap*)addGameElement:(QTGameElement*)element;
 -(EKQueue*)allMoves;

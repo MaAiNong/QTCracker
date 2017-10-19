@@ -8,6 +8,7 @@
 
 #import "QTGameEngine.h"
 #import "QTIdentifyGenerator.h"
+#import "QTMapSingleton.h"
 #import "QTGameMap.h"
 #import "QTGameElementFactory.h"
 #import "EKStack.h"
@@ -69,13 +70,81 @@
 
 -(QTGameMap*)crack;
 {
-   [self crackMap:_gameMap];
-   return _gameMap;
+    [self.mapDeque clear];
+    [self.usedMap clear];
+    [[QTMapSingleton sharedSingleton] clearAll];
+    [[QTMapSingleton sharedSingleton] addMap:_gameMap];
+    [self.usedMap insertObject:_gameMap];
+    
+    if([_gameMap canFishMoveOut]) {
+        
+        [self noNeedToCrack];
+        return _gameMap;
+    }
+    
+//  广度遍历
+    EKQueue* tmpQueue = [[EKQueue alloc] init];
+    [tmpQueue insertObject:_gameMap];
+    [self BFSCrackMap:tmpQueue];
+//  深度遍历
+//  [self DFSCrackMap:_gameMap];
+    
+    return _gameMap;
 }
 
+-(QTGameMap*)BFSCrackMap:(EKQueue*)maps
+{
+    if (![maps isEmpty])
+    {
+        EKQueue* newQueue = [[EKQueue alloc] init];
+        QTGameMap* map = [maps removeFirstObject];
+        while (map) {
+            if ([map canFishMoveOut])
+            {
+                [self handleBFSMap:map];
+                return map;
+            }
+            else
+            {
+                
+                EKQueue* newMoves = [map allMoves];
+                
+                for (QTGameMap* tmpMap in [newMoves quickAllObjects])
+                {
+                    tmpMap.fatherMap = map;
+                    [newQueue insertObject:tmpMap];
+                }
+            }
+            map = [maps removeFirstObject];
+        }
+        return [self BFSCrackMap:newQueue];
+    }
+    else
+    {
+        return nil;
+    }
+}
 
+-(void)handleBFSMap:(QTGameMap*)map
+{
+    [self.mapDeque clear];
+    [self.mapDeque insertObjectToFront:map];
+    QTGameMap* tmpMap = map.fatherMap;
+    while (tmpMap)
+    {
+        [self.mapDeque insertObjectToFront:tmpMap];
+        tmpMap = tmpMap.fatherMap;
+    }
+    if ([self.mapDeque isEmpty]) {
+        
+    }
+    else
+    {
+        [self crackSuccess];
+    }
+}
 
--(BOOL)crackMap:(QTGameMap*)map
+-(BOOL)DFSCrackMap:(QTGameMap*)map
 {//深度遍历算法
     [self.mapDeque insertObjectToBack:map];
     [self.usedMap insertObject:map];
@@ -91,7 +160,7 @@
             while (![maps isEmpty]) {
                 QTGameMap* nextMap = [maps removeFirstObject];
                 if (![self isMapUsed:nextMap]) {
-                    BOOL crack = [self crackMap:nextMap];
+                    BOOL crack = [self DFSCrackMap:nextMap];
                     if(crack)
                     {
                         return crack;
@@ -108,6 +177,13 @@
             [self.mapDeque removeLastObject];
         }
         return NO;
+    }
+}
+
+-(void)noNeedToCrack
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(mapEngine:noNeedToCrack:)]) {
+        [self.delegate mapEngine:self noNeedToCrack:nil];
     }
 }
 

@@ -13,6 +13,7 @@
 @protocol QTGameEngineDelegate<NSObject>
 -(void)mapEngine:(QTGameEngine*)engine crackSuccess:(EKDeque*)resultQueue;
 -(void)mapEngine:(QTGameEngine*)engine crackFailed:(EKDeque*)resultQueue;
+-(void)mapEngine:(QTGameEngine*)engine noNeedToCrack:(NSDictionary*)message;
 @end
 
 @interface QTGameEngine : NSObject<QTGameMapDelegate>

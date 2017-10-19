@@ -245,9 +245,9 @@
             QTGameMap* map = [self shadowCopy];
             map.delegate = self.delegate;
             map = [map replaceElement:newElement];
-            if (self.delegate&&[self.delegate respondsToSelector:@selector(isMapValid:)]) {
-                mapValid = [self.delegate isMapValid:map];
-            }
+//            if (self.delegate&&[self.delegate respondsToSelector:@selector(isMapValid:)]) {
+//                mapValid = [self.delegate isMapValid:map];
+//            }
             if (mapValid) {
                 
                 mapValid = ![[QTMapSingleton sharedSingleton] isMapExist:map];
