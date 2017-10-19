@@ -41,7 +41,6 @@
     
     self.crackQueue = dispatch_queue_create("com.man.sb", DISPATCH_QUEUE_SERIAL);
     self.uiQueue = dispatch_queue_create("com.man.ui", DISPATCH_QUEUE_SERIAL);
-    [self mapEngine:nil noNeedToCrack:nil];
     
     dispatch_async(self.crackQueue, ^{
         _startTime = [NSDate timeIntervalSinceReferenceDate];

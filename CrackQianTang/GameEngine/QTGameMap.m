@@ -122,10 +122,11 @@
 
 -(BOOL)isEqualToMap:(QTGameMap*)map
 {
-    for (QTGameElement* origin in [self quickAllObjects]) {
-        
-        for (QTGameElement* destination in [map quickAllObjects]) {
-            
+//由于保证了map的顺序所以 可以用一个for循环来搞定对比
+    for (QTGameElement* origin in [self quickAllObjects])
+    {
+        for (QTGameElement* destination in [map quickAllObjects])
+        {
             if (origin.identity == destination.identity)
             {
                 if(![origin isEqualToElement:destination])
@@ -135,6 +136,21 @@
             }
         }
     }
+//    NSArray* elements = [self quickAllObjects];
+//    NSArray* mapElements = [map quickAllObjects];
+//    if (elements.count!=mapElements.count) {
+//        return NO;
+//    }
+//
+//    for (int i=0; i<elements.count; i++) {
+//
+//        QTGameElement* e1 = elements[i];
+//        QTGameElement* e2 = elements[i];
+//        if (![e1 isEqualToElement:e2]) {
+//            return NO;
+//        }
+//
+//    }
     return YES;
 }
 
@@ -240,28 +256,26 @@
         NSArray* canMoves = [self getElementMoves:element];
         for (QTGameElement* newElement in canMoves) {
             
-            BOOL mapValid = YES;
-            
             QTGameMap* map = [self shadowCopy];
             map.delegate = self.delegate;
             map = [map replaceElement:newElement];
 //            if (self.delegate&&[self.delegate respondsToSelector:@selector(isMapValid:)]) {
 //                mapValid = [self.delegate isMapValid:map];
 //            }
-            if (mapValid) {
-                
-                mapValid = ![[QTMapSingleton sharedSingleton] isMapExist:map];
-                if(mapValid)
-                {
-                    [[QTMapSingleton sharedSingleton] addMap:map];
-                    [queue insertObject:map];
-                }
-                else
-                {
-//                    NSLog(@"ex");
-                }
-            }
+//            if (mapValid) {
             
+            BOOL mapValid = ![[QTMapSingleton sharedSingleton] isMapExist:map];
+            
+            if(mapValid)
+            {
+                [[QTMapSingleton sharedSingleton] addMap:map];
+                [queue insertObject:map];
+            }
+            else
+            {
+//                    NSLog(@"ex");
+            }
+//            }
         }
     }
     return queue;

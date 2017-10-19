@@ -17,14 +17,14 @@
 @interface QTGameEngine()
 @property(nonatomic,strong)QTGameMap* gameMap;
 @property(nonatomic,strong)EKDeque* mapDeque;
-@property(nonatomic,strong)EKQueue* usedMap;
+//@property(nonatomic,strong)EKQueue* usedMap;
 @end
 
 @implementation QTGameEngine
 -(void)start
 {
     self.mapDeque = [[EKDeque alloc] init];
-    self.usedMap = [[EKQueue alloc] init];
+//    self.usedMap = [[EKQueue alloc] init];
     
     [[QTIdentifyGenerator sharedInstance] reset];
     [[QTMapSingleton sharedSingleton] clearAll];
@@ -58,23 +58,23 @@
     }
 }
 
--(BOOL)isMapUsed:(QTGameMap*)map
-{
-    for (QTGameMap* usedMap in [self.usedMap quickAllObjects]) {
-        if ([usedMap isEqualToMap:map]) {
-            return YES;
-        }
-    }
-    return NO;
-}
-
+//-(BOOL)isMapUsed:(QTGameMap*)map
+//{
+//    for (QTGameMap* usedMap in [self.usedMap quickAllObjects]) {
+//        if ([usedMap isEqualToMap:map]) {
+//            return YES;
+//        }
+//    }
+//    return NO;
+//}
+//
 -(QTGameMap*)crack;
 {
     [self.mapDeque clear];
-    [self.usedMap clear];
+//    [self.usedMap clear];
     [[QTMapSingleton sharedSingleton] clearAll];
     [[QTMapSingleton sharedSingleton] addMap:_gameMap];
-    [self.usedMap insertObject:_gameMap];
+//    [self.usedMap insertObject:_gameMap];
     
     if([_gameMap canFishMoveOut]) {
         
@@ -83,11 +83,16 @@
     }
     
 //  广度遍历
-    EKQueue* tmpQueue = [[EKQueue alloc] init];
-    [tmpQueue insertObject:_gameMap];
-    [self BFSCrackMap:tmpQueue];
+//    EKQueue* tmpQueue = [[EKQueue alloc] init];
+//    [tmpQueue insertObject:_gameMap];
+//    [self BFSCrackMap:tmpQueue];
 //  深度遍历
-//  [self DFSCrackMap:_gameMap];
+    [self DFSCrackMap:_gameMap];
+    
+    if ([self.mapDeque isEmpty])
+    {
+        [self crackFailed];
+    }
     
     return _gameMap;
 }
@@ -147,7 +152,7 @@
 -(BOOL)DFSCrackMap:(QTGameMap*)map
 {//深度遍历算法
     [self.mapDeque insertObjectToBack:map];
-    [self.usedMap insertObject:map];
+//    [self.usedMap insertObject:map];
     
     if ([map canFishMoveOut]) {
         [self crackSuccess];
@@ -159,17 +164,17 @@
         if (![maps isEmpty]) {
             while (![maps isEmpty]) {
                 QTGameMap* nextMap = [maps removeFirstObject];
-                if (![self isMapUsed:nextMap]) {
-                    BOOL crack = [self DFSCrackMap:nextMap];
-                    if(crack)
-                    {
-                        return crack;
-                    }
-                    else
-                    {
-                        [self.mapDeque removeLastObject];
-                    }
+//                if (![self isMapUsed:nextMap]) {
+                BOOL crack = [self DFSCrackMap:nextMap];
+                if(crack)
+                {
+                    return crack;
                 }
+                else
+                {
+                    [self.mapDeque removeLastObject];
+                }
+//                }
             }
         }
         else
@@ -187,10 +192,10 @@
     }
 }
 
--(BOOL)isMapValid:(QTGameMap *)map
-{
-    return ![self isMapUsed:map];
-}
+//-(BOOL)isMapValid:(QTGameMap *)map
+//{
+//    return ![self isMapUsed:map];
+//}
 
 -(void)crackSuccess
 {

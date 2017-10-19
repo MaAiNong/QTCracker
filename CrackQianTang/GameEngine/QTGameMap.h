@@ -14,7 +14,7 @@
 @class QTGameMap;
 
 @protocol QTGameMapDelegate <NSObject>
--(BOOL)isMapValid:(QTGameMap*)map;
+//-(BOOL)isMapValid:(QTGameMap*)map;
 @end
 
 @interface QTGameMap : EKQueue
