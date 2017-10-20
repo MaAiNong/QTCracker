@@ -248,8 +248,7 @@
 -(EKQueue*)allMoves
 {
     //需要考虑深浅拷贝
-    //这个地方可以优化为从已有的map列表里面取或删除map 这样的话虽然没有降低比较频率，但是节省了空间
-    //TODO:xkt allmoves
+//    NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
     EKQueue* queue = [[EKQueue alloc] init];
     NSArray* allData = [self quickAllObjects];
     for (QTGameElement* element in allData)
@@ -260,10 +259,7 @@
             QTGameMap* map = [self shadowCopy];
             map.delegate = self.delegate;
             map = [map replaceElement:newElement];
-//            if (self.delegate&&[self.delegate respondsToSelector:@selector(isMapValid:)]) {
-//                mapValid = [self.delegate isMapValid:map];
-//            }
-//            if (mapValid) {
+            map.fatherMap = self;
             
             BOOL mapValid = ![[QTMapSingleton sharedSingleton] isMapExist:map];
             
@@ -272,13 +268,12 @@
                 [[QTMapSingleton sharedSingleton] addMap:map];
                 [queue insertObject:map];
             }
-            else
-            {
-//                    NSLog(@"ex");
-            }
-//            }
         }
     }
+    
+//    NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+//    NSLog(@"getAllMove time:%@ s",[NSNumber numberWithDouble:(end-startTime)]);
+    
     return queue;
 }
 @end

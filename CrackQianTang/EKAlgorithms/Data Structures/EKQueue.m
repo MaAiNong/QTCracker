@@ -87,4 +87,9 @@
     return [buffer copy];
 }
 
+-(void)insertEKQueue:(EKQueue*)queue
+{
+    [self.queueArray addObjectsFromArray:[queue quickAllObjects]];
+}
+
 @end

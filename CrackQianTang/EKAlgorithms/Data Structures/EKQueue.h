@@ -18,4 +18,5 @@
 - (NSArray *)allObjectsFromQueue;
 - (NSArray *)quickAllObjects;
 
+-(void)insertEKQueue:(EKQueue*)queue;
 @end
