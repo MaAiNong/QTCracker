@@ -92,4 +92,9 @@
     [self.queueArray addObjectsFromArray:[queue quickAllObjects]];
 }
 
+-(void)insertArray:(NSArray*)array
+{
+    [self.queueArray addObjectsFromArray:array];
+}
+
 @end

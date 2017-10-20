@@ -16,7 +16,7 @@
 -(void)mapEngine:(QTGameEngine*)engine noNeedToCrack:(NSDictionary*)message;
 @end
 
-@interface QTGameEngine : NSObject<QTGameMapDelegate>
+@interface QTGameEngine : NSObject
 
 @property(nonatomic,weak)id<QTGameEngineDelegate>delegate;
 

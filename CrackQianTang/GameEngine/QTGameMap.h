@@ -13,26 +13,26 @@
 
 @class QTGameMap;
 
-@protocol QTGameMapDelegate <NSObject>
-//-(BOOL)isMapValid:(QTGameMap*)map;
-@end
-
 @interface QTGameMap : EKQueue
 
-@property(nonatomic,weak)id<QTGameMapDelegate> delegate;
+@property(nonatomic,assign,readonly)int matchWeight;
 @property(nonatomic,weak)QTGameMap* fatherMap;//广度优先算法里面有用
 
 -(QTGameMap*)addGameElement:(QTGameElement*)element;
+-(QTGameMap*)shadowCopy;
+-(QTGameMap*)replaceElement:(QTGameElement*)element;
+
 -(EKQueue*)allMoves;
+-(EKQueue*)newAllMoves;
 -(QTFishHeader*)getFinshHeader;
--(BOOL)isEqualToMap:(QTGameMap*)map;
--(void)sortByIdentify;
 
 -(NSEnumerator*)enumerator;
+
+-(BOOL)isEqualToMap:(QTGameMap*)map;
+-(void)sortByIdentify;
 -(BOOL)canFishMoveOut;
 -(BOOL)isValid;
 
--(QTGameMap*)shadowCopy;
--(QTGameMap*)replaceElement:(QTGameElement*)element;
+-(void)addMatchWeight;
 
 @end

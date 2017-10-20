@@ -14,7 +14,7 @@
 {
     if (self  = [super init])
     {
-        
+        _matchWeight = 0;
     }
     return self;
 }
@@ -158,7 +158,6 @@
 -(QTGameMap*)shadowCopy
 {
     QTGameMap* map = [[QTGameMap alloc] init];
-    map.delegate = self.delegate;
     for (QTGameElement* element in [self quickAllObjects]) {
         [map addGameElement:element];
     }
@@ -169,7 +168,6 @@
 -(QTGameMap*)replaceElement:(QTGameElement*)element
 {
     QTGameMap* map = [[QTGameMap alloc] init];
-    map.delegate = self.delegate;
     QTGameElement* first = [self removeFirstObject];
     while (first) {
         if (first.identity == element.identity)
@@ -248,7 +246,7 @@
 -(EKQueue*)allMoves
 {
     //需要考虑深浅拷贝
-//    NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
+    //    NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
     EKQueue* queue = [[EKQueue alloc] init];
     NSArray* allData = [self quickAllObjects];
     for (QTGameElement* element in allData)
@@ -257,7 +255,6 @@
         for (QTGameElement* newElement in canMoves) {
             
             QTGameMap* map = [self shadowCopy];
-            map.delegate = self.delegate;
             map = [map replaceElement:newElement];
             map.fatherMap = self;
             
@@ -271,9 +268,124 @@
         }
     }
     
-//    NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
-//    NSLog(@"getAllMove time:%@ s",[NSNumber numberWithDouble:(end-startTime)]);
+    //    NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+    //    NSLog(@"getAllMove time:%@ s",[NSNumber numberWithDouble:(end-startTime)]);
     
     return queue;
+}
+
+-(QTGameMap*)movedMap:(QTGameElement*)element
+{
+    QTGameMap* map = [self shadowCopy];
+    map = [map replaceElement:element];
+    map.fatherMap = self;
+    
+    BOOL mapValid = ![[QTMapSingleton sharedSingleton] isMapExist:map];
+    if (mapValid) {
+        [[QTMapSingleton sharedSingleton] addMap:map];
+        return map;
+    }
+    else
+        return nil;
+    
+}
+
+-(NSArray*)newGetElementMoves:(QTGameElement*)element
+{
+//    QTGameMap
+    NSMutableArray* array = [[NSMutableArray alloc] init];
+    
+    if (ElementDirection_Horizon == element.direction)
+    {
+        for(int i=element.positionX-1;i>=0;i--)
+        {
+            QTGameElement* newElement = [element deepCopy];
+            newElement.positionX = i;
+            if ([self noConflictToOthers:newElement]) {
+
+                QTGameMap* newMap = [self movedMap:newElement];
+                if (newMap) {
+                    [array addObject:newMap];
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+        for (int i=element.positionX+1; i<=QT_BOARD_COUNT-(element.blockNumber); i++) {
+            QTGameElement* newElement = [element deepCopy];
+            newElement.positionX = i;
+            if ([self noConflictToOthers:newElement]) {
+                
+                QTGameMap* newMap = [self movedMap:newElement];
+                if (newMap) {
+                    [array addObject:newMap];
+                }
+                
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    else
+    {
+        for(int i=element.positionY-1;i>=0;i--)
+        {
+            QTGameElement* newElement = [element deepCopy];
+            newElement.positionY = i;
+            if ([self noConflictToOthers:newElement]) {
+                
+                QTGameMap* newMap = [self movedMap:newElement];
+                if (newMap) {
+                    [array addObject:newMap];
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+        for (int i=element.positionY+1; i<=QT_BOARD_COUNT-(element.blockNumber); i++) {
+            QTGameElement* newElement = [element deepCopy];
+            newElement.positionY = i;
+            if ([self noConflictToOthers:newElement]) {
+                
+                QTGameMap* newMap = [self movedMap:newElement];
+                if (newMap) {
+                    [array addObject:newMap];
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    
+    return array;
+}
+
+-(EKQueue*)newAllMoves
+{
+    //需要考虑深浅拷贝
+    EKQueue* queue = [[EKQueue alloc] init];
+    NSArray* allData = [self quickAllObjects];
+    for (QTGameElement* element in allData)
+    {
+        NSArray* canMoves = [self newGetElementMoves:element];
+        [queue insertArray:canMoves];
+    }
+    
+    return queue;
+}
+
+-(void)addMatchWeight
+{
+    _matchWeight++;
 }
 @end

@@ -30,7 +30,6 @@
     
     //初始化map
     QTGameMap* map = [[QTGameMap alloc] init];
-    map.delegate = self;
     //第121局
     //头部
     [map addGameElement:HEADER(1, 2)];
@@ -100,7 +99,7 @@
             }
             else
             {
-                EKQueue* newMoves = [map allMoves];
+                EKQueue* newMoves = [map newAllMoves];
                 [newQueue insertEKQueue:newMoves];
             }
             map = [maps removeFirstObject];
