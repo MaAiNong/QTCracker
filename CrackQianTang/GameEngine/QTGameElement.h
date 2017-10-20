@@ -23,4 +23,5 @@ typedef enum {ElementDirection_None=-1,ElementDirection_Horizon,ElementDirection
 -(BOOL)isValid;
 -(BOOL)isEqualToElement:(QTGameElement*)element;
 -(QTGameElement*)deepCopy;
+-(NSString*)edentify;
 @end

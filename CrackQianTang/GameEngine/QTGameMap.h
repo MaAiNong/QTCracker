@@ -34,5 +34,5 @@
 -(BOOL)isValid;
 
 -(void)addMatchWeight;
-
+-(NSString*)getIdentify;
 @end

@@ -47,27 +47,27 @@
             break;
         }
     }
-    if (match) {
-        [self resort];
-    }
+//    if (match) {
+//        [self resort];
+//    }
     return match;
 }
 
 -(void)resort
 {
-    [self.usedMap sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        QTGameMap* map1 = obj1;
-        QTGameMap* map2 = obj2;
-        if (map1.matchWeight>map2.matchWeight) {
-            return NSOrderedAscending;
-        }
-        else if(map1.matchWeight<map2.matchWeight)
-        {
-            return NSOrderedDescending;
-        }
-        else
-            return NSOrderedSame;
-    }];
+//    [self.usedMap sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+//        QTGameMap* map1 = obj1;
+//        QTGameMap* map2 = obj2;
+//        if (map1.matchWeight>map2.matchWeight) {
+//            return NSOrderedAscending;
+//        }
+//        else if(map1.matchWeight<map2.matchWeight)
+//        {
+//            return NSOrderedDescending;
+//        }
+//        else
+//            return NSOrderedSame;
+//    }];
 }
 
 -(void)clearAll

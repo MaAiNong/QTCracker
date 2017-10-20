@@ -9,6 +9,9 @@
 #import "QTGameElement.h"
 
 @implementation QTGameElement
+{
+    NSString* _elementID;
+}
 -(id)init
 {
     if (self  = [super init]) {
@@ -17,6 +20,7 @@
         self.direction = ElementDirection_None;
         self.positionX=-1;
         self.positionY=-1;
+        _elementID = nil;
     }
     return self;
 }
@@ -49,6 +53,14 @@
 {
     //子类实现
     return nil;
+}
+
+-(NSString*)edentify
+{
+    if (!_elementID) {
+        _elementID = [NSString stringWithFormat:@"%d%d%d",self.identity,self.positionX,self.positionY];
+    }
+    return _elementID;
 }
 
 -(NSString*)description

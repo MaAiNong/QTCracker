@@ -9,12 +9,16 @@
 #import "QTGameMap.h"
 #import "QTMapSingleton.h"
 @implementation QTGameMap
-
+{
+    NSMutableString* _identifier;
+}
 -(id)init
 {
+    
     if (self  = [super init])
     {
         _matchWeight = 0;
+        _identifier = nil;
     }
     return self;
 }
@@ -122,6 +126,8 @@
 
 -(BOOL)isEqualToMap:(QTGameMap*)map
 {
+    
+    return [[self getIdentify] isEqualToString:[map getIdentify]];
 //由于保证了map的顺序所以 可以用一个for循环来搞定对比
 //    for (QTGameElement* origin in [self quickAllObjects])
 //    {
@@ -136,23 +142,25 @@
 //            }
 //        }
 //    }
-    NSArray* elements = [self quickAllObjects];
-    NSArray* mapElements = [map quickAllObjects];
-    if (elements.count!=mapElements.count) {
-        return NO;
-    }
-
-    for (int i=0; i<elements.count; i++) {
-
-        QTGameElement* e1 = elements[i];
-        QTGameElement* e2 = mapElements[i];
-        if (![e1 isEqualToElement:e2])
-        {
-            return NO;
-        }
-
-    }
-    return YES;
+    
+    
+//    NSArray* elements = [self quickAllObjects];
+//    NSArray* mapElements = [map quickAllObjects];
+//    if (elements.count!=mapElements.count) {
+//        return NO;
+//    }
+//
+//    for (int i=0; i<elements.count; i++) {
+//
+//        QTGameElement* e1 = elements[i];
+//        QTGameElement* e2 = mapElements[i];
+//        if (![e1 isEqualToElement:e2])
+//        {
+//            return NO;
+//        }
+//
+//    }
+//    return YES;
 }
 
 -(QTGameMap*)shadowCopy
@@ -192,6 +200,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionX = i;
             if ([self noConflictToOthers:newElement]) {
+                [newElement edentify];
                 [array addObject:newElement];
             }
             else
@@ -204,6 +213,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionX = i;
             if ([self noConflictToOthers:newElement]) {
+                [newElement edentify];
                 [array addObject:newElement];
             }
             else
@@ -219,6 +229,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionY = i;
             if ([self noConflictToOthers:newElement]) {
+                [newElement edentify];
                 [array addObject:newElement];
             }
             else
@@ -231,6 +242,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionY = i;
             if ([self noConflictToOthers:newElement]) {
+                [newElement edentify];
                 [array addObject:newElement];
             }
             else
@@ -302,7 +314,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionX = i;
             if ([self noConflictToOthers:newElement]) {
-
+                [newElement edentify];
                 QTGameMap* newMap = [self movedMap:newElement];
                 if (newMap) {
                     [array addObject:newMap];
@@ -318,7 +330,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionX = i;
             if ([self noConflictToOthers:newElement]) {
-                
+                [newElement edentify];
                 QTGameMap* newMap = [self movedMap:newElement];
                 if (newMap) {
                     [array addObject:newMap];
@@ -338,7 +350,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionY = i;
             if ([self noConflictToOthers:newElement]) {
-                
+                [newElement edentify];
                 QTGameMap* newMap = [self movedMap:newElement];
                 if (newMap) {
                     [array addObject:newMap];
@@ -354,7 +366,7 @@
             QTGameElement* newElement = [element deepCopy];
             newElement.positionY = i;
             if ([self noConflictToOthers:newElement]) {
-                
+                [newElement edentify];
                 QTGameMap* newMap = [self movedMap:newElement];
                 if (newMap) {
                     [array addObject:newMap];
@@ -387,5 +399,16 @@
 -(void)addMatchWeight
 {
     _matchWeight++;
+}
+
+-(NSString*)getIdentify
+{
+    if (!_identifier) {
+        _identifier = [[NSMutableString alloc] init];
+        for (QTGameElement* element in [self quickAllObjects]) {
+            [_identifier appendString:[element edentify]];
+        }
+    }
+    return _identifier;
 }
 @end
