@@ -390,7 +390,10 @@
     for (QTGameElement* element in allData)
     {
         NSArray* canMoves = [self newGetElementMoves:element];
-        [queue insertArray:canMoves];
+        if ([canMoves count]>0) {
+            [queue insertArray:canMoves];
+        }
+        
     }
     
     return queue;

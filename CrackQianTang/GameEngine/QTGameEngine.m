@@ -30,19 +30,36 @@
     
     //初始化map
     QTGameMap* map = [[QTGameMap alloc] init];
-    //第121局
+//    //第121局
+//    //头部
+//    [map addGameElement:HEADER(1, 2)];
+//    //垂直
+//    [map addGameElement:BLOCKER_V(0, 1, 2)];
+//    [map addGameElement:BLOCKER_V(3, 1, 3)];
+//    [map addGameElement:BLOCKER_V(4, 1, 3)];
+//    [map addGameElement:BLOCKER_V(5, 1, 2)];
+//    [map addGameElement:BLOCKER_V(2, 3, 3)];
+//    //水平
+//    [map addGameElement:BLOCKER_H(0, 3, 2)];
+//    [map addGameElement:BLOCKER_H(3, 4, 2)];
+//    [map addGameElement:BLOCKER_H(3, 5, 2)];
+    
+    //第133局
     //头部
     [map addGameElement:HEADER(1, 2)];
     //垂直
-    [map addGameElement:BLOCKER_V(0, 1, 2)];
-    [map addGameElement:BLOCKER_V(3, 1, 3)];
-    [map addGameElement:BLOCKER_V(4, 1, 3)];
-    [map addGameElement:BLOCKER_V(5, 1, 2)];
-    [map addGameElement:BLOCKER_V(2, 3, 3)];
+    [map addGameElement:BLOCKER_V(2, 0, 2)];
+    [map addGameElement:BLOCKER_V(0, 2, 2)];
+    [map addGameElement:BLOCKER_V(3, 2, 2)];
+    [map addGameElement:BLOCKER_V(4, 4, 2)];
     //水平
-    [map addGameElement:BLOCKER_H(0, 3, 2)];
-    [map addGameElement:BLOCKER_H(3, 4, 2)];
-    [map addGameElement:BLOCKER_H(3, 5, 2)];
+    [map addGameElement:BLOCKER_H(0, 1, 2)];
+    [map addGameElement:BLOCKER_H(3, 0, 3)];
+    [map addGameElement:BLOCKER_H(4, 3, 2)];
+    [map addGameElement:BLOCKER_H(0, 4, 2)];
+    [map addGameElement:BLOCKER_H(0, 5, 2)];
+    [map addGameElement:BLOCKER_H(2, 4, 2)];
+    [map addGameElement:BLOCKER_H(2, 5, 2)]; 
     
     self.gameMap = map;
     
