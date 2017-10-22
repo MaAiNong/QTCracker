@@ -14,13 +14,24 @@
 #import "EKStack.h"
 #import "EKDeque.h"
 #import "QTMapSingleton.h"
+#import "UIImage+Canny.h"
 @interface QTGameEngine()
 @property(nonatomic,strong)QTGameMap* gameMap;
 @property(nonatomic,strong)EKDeque* mapDeque;
+@property(nonatomic,strong)UIImage* gameImage;
 @end
 
 @implementation QTGameEngine
--(void)start
+
+-(id)initWithImage:(UIImage*)image
+{
+    if (self  = [super init]) {
+        self.gameImage = image;
+    }
+    return self;
+}
+
+-(BOOL)start
 {
     self.mapDeque = [[EKDeque alloc] init];
 //    self.usedMap = [[EKQueue alloc] init];
@@ -28,8 +39,20 @@
     [[QTIdentifyGenerator sharedInstance] reset];
     [[QTMapSingleton sharedSingleton] clearAll];
     
+    if (!self.gameImage) {
+        NSLog(@"NO IMAGE");
+        return NO;
+    }
+    
+    self.gameMap = [self.gameImage QTGameMap];
+    if (!self.gameMap||[self.gameMap isEmpty]) {
+        NSLog(@"NO MAP");
+        return NO;
+    }
+    
+    
     //初始化map
-    QTGameMap* map = [[QTGameMap alloc] init];
+//    QTGameMap* map = [[QTGameMap alloc] init];
 //    //第121局
 //    //头部
 //    [map addGameElement:HEADER(1, 2)];
@@ -46,30 +69,34 @@
     
     //第133局
     //头部
-    [map addGameElement:HEADER(1, 2)];
-    //垂直
-    [map addGameElement:BLOCKER_V(2, 0, 2)];
-    [map addGameElement:BLOCKER_V(0, 2, 2)];
-    [map addGameElement:BLOCKER_V(3, 2, 2)];
-    [map addGameElement:BLOCKER_V(4, 4, 2)];
-    //水平
-    [map addGameElement:BLOCKER_H(0, 1, 2)];
-    [map addGameElement:BLOCKER_H(3, 0, 3)];
-    [map addGameElement:BLOCKER_H(4, 3, 2)];
-    [map addGameElement:BLOCKER_H(0, 4, 2)];
-    [map addGameElement:BLOCKER_H(0, 5, 2)];
-    [map addGameElement:BLOCKER_H(2, 4, 2)];
-    [map addGameElement:BLOCKER_H(2, 5, 2)]; 
+//    [map addGameElement:HEADER(1, 2)];
+//    //垂直
+//    [map addGameElement:BLOCKER_V(2, 0, 2)];
+//    [map addGameElement:BLOCKER_V(0, 2, 2)];
+//    [map addGameElement:BLOCKER_V(3, 2, 2)];
+//    [map addGameElement:BLOCKER_V(4, 4, 2)];
+//    //水平
+//    [map addGameElement:BLOCKER_H(0, 1, 2)];
+//    [map addGameElement:BLOCKER_H(3, 0, 3)];
+//    [map addGameElement:BLOCKER_H(4, 3, 2)];
+//    [map addGameElement:BLOCKER_H(0, 4, 2)];
+//    [map addGameElement:BLOCKER_H(0, 5, 2)];
+//    [map addGameElement:BLOCKER_H(2, 4, 2)];
+//    [map addGameElement:BLOCKER_H(2, 5, 2)];
     
-    self.gameMap = map;
     
-    if([map isValid])
+    
+//    self.gameMap = map;
+    
+    if([self.gameMap isValid])
     {
         NSLog(@"data valid");
+        return YES;
     }
     else
     {
         NSLog(@"data invalid");
+        return NO;
     }
 }
 
@@ -116,7 +143,7 @@
             }
             else
             {
-                EKQueue* newMoves = [map newAllMoves];
+                EKQueue* newMoves = [map allMoves];//[map newAllMoves];
                 [newQueue insertEKQueue:newMoves];
             }
             map = [maps removeFirstObject];

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A02E5AF1F9B6EF1007774BB /* QTPixels2Elements.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A02E5AE1F9B6EF1007774BB /* QTPixels2Elements.m */; };
+		0A72D7B71F9CAFAE000C7805 /* NPMatrixRGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7AD1F9CAFAD000C7805 /* NPMatrixRGBA.m */; };
+		0A72D7B81F9CAFAE000C7805 /* NPCommonAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7AE1F9CAFAD000C7805 /* NPCommonAlgorithm.m */; };
+		0A72D7B91F9CAFAE000C7805 /* NPCommonMatrixes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7AF1F9CAFAD000C7805 /* NPCommonMatrixes.m */; };
+		0A72D7BA1F9CAFAE000C7805 /* NPMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B01F9CAFAD000C7805 /* NPMatrix.m */; };
+		0A72D7BB1F9CAFAE000C7805 /* NPMatrixUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B11F9CAFAD000C7805 /* NPMatrixUtilities.m */; };
+		0A72D7BC1F9CAFAE000C7805 /* NPMatrixType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B21F9CAFAD000C7805 /* NPMatrixType.m */; };
+		0A72D7BD1F9CAFAE000C7805 /* NPMatrixOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B31F9CAFAD000C7805 /* NPMatrixOperate.m */; };
+		0A72D7BE1F9CAFAE000C7805 /* NPCannyOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B41F9CAFAD000C7805 /* NPCannyOperator.m */; };
+		0A72D7C11F9CB2CE000C7805 /* UIImage+Canny.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */; };
+		0A72D7C31F9CE8C3000C7805 /* qt121.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A72D7C21F9CE8C2000C7805 /* qt121.png */; };
 		7704DBF51F7B775A00C069FF /* QTElementToView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBF41F7B775A00C069FF /* QTElementToView.m */; };
 		7704DBF81F7B780E00C069FF /* QTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBF71F7B780E00C069FF /* QTBaseView.m */; };
 		7704DBFB1F7B783C00C069FF /* QTFinshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBFA1F7B783C00C069FF /* QTFinshView.m */; };
@@ -59,6 +70,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A02E5AD1F9B6EF1007774BB /* QTPixels2Elements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTPixels2Elements.h; sourceTree = "<group>"; };
+		0A02E5AE1F9B6EF1007774BB /* QTPixels2Elements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTPixels2Elements.m; sourceTree = "<group>"; };
+		0A72D7A71F9CAFAD000C7805 /* NPMatrixType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMatrixType.h; sourceTree = "<group>"; };
+		0A72D7A81F9CAFAD000C7805 /* NPMatrixUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMatrixUtilities.h; sourceTree = "<group>"; };
+		0A72D7A91F9CAFAD000C7805 /* NPMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMatrix.h; sourceTree = "<group>"; };
+		0A72D7AA1F9CAFAD000C7805 /* NPCommonMatrixes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPCommonMatrixes.h; sourceTree = "<group>"; };
+		0A72D7AB1F9CAFAD000C7805 /* NPCannyOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPCannyOperator.h; sourceTree = "<group>"; };
+		0A72D7AC1F9CAFAD000C7805 /* NPMatrixOperate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMatrixOperate.h; sourceTree = "<group>"; };
+		0A72D7AD1F9CAFAD000C7805 /* NPMatrixRGBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMatrixRGBA.m; sourceTree = "<group>"; };
+		0A72D7AE1F9CAFAD000C7805 /* NPCommonAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPCommonAlgorithm.m; sourceTree = "<group>"; };
+		0A72D7AF1F9CAFAD000C7805 /* NPCommonMatrixes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPCommonMatrixes.m; sourceTree = "<group>"; };
+		0A72D7B01F9CAFAD000C7805 /* NPMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMatrix.m; sourceTree = "<group>"; };
+		0A72D7B11F9CAFAD000C7805 /* NPMatrixUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMatrixUtilities.m; sourceTree = "<group>"; };
+		0A72D7B21F9CAFAD000C7805 /* NPMatrixType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMatrixType.m; sourceTree = "<group>"; };
+		0A72D7B31F9CAFAD000C7805 /* NPMatrixOperate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMatrixOperate.m; sourceTree = "<group>"; };
+		0A72D7B41F9CAFAD000C7805 /* NPCannyOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPCannyOperator.m; sourceTree = "<group>"; };
+		0A72D7B51F9CAFAD000C7805 /* NPMatrixRGBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMatrixRGBA.h; sourceTree = "<group>"; };
+		0A72D7B61F9CAFAD000C7805 /* NPCommonAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPCommonAlgorithm.h; sourceTree = "<group>"; };
+		0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Canny.m"; sourceTree = "<group>"; };
+		0A72D7C01F9CB2CE000C7805 /* UIImage+Canny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Canny.h"; sourceTree = "<group>"; };
+		0A72D7C21F9CE8C2000C7805 /* qt121.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qt121.png; sourceTree = "<group>"; };
 		7704DBF31F7B775A00C069FF /* QTElementToView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTElementToView.h; sourceTree = "<group>"; };
 		7704DBF41F7B775A00C069FF /* QTElementToView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTElementToView.m; sourceTree = "<group>"; };
 		7704DBF61F7B780E00C069FF /* QTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTBaseView.h; sourceTree = "<group>"; };
@@ -174,6 +206,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A02E5A91F9B6D07007774BB /* QTImageDetector */ = {
+			isa = PBXGroup;
+			children = (
+				0A02E5AD1F9B6EF1007774BB /* QTPixels2Elements.h */,
+				0A02E5AE1F9B6EF1007774BB /* QTPixels2Elements.m */,
+				0A72D7C01F9CB2CE000C7805 /* UIImage+Canny.h */,
+				0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */,
+				0A72D7C21F9CE8C2000C7805 /* qt121.png */,
+			);
+			path = QTImageDetector;
+			sourceTree = "<group>";
+		};
+		0A72D7A61F9CAFAD000C7805 /* NPMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				0A72D7A71F9CAFAD000C7805 /* NPMatrixType.h */,
+				0A72D7A81F9CAFAD000C7805 /* NPMatrixUtilities.h */,
+				0A72D7A91F9CAFAD000C7805 /* NPMatrix.h */,
+				0A72D7AA1F9CAFAD000C7805 /* NPCommonMatrixes.h */,
+				0A72D7AB1F9CAFAD000C7805 /* NPCannyOperator.h */,
+				0A72D7AC1F9CAFAD000C7805 /* NPMatrixOperate.h */,
+				0A72D7AD1F9CAFAD000C7805 /* NPMatrixRGBA.m */,
+				0A72D7AE1F9CAFAD000C7805 /* NPCommonAlgorithm.m */,
+				0A72D7AF1F9CAFAD000C7805 /* NPCommonMatrixes.m */,
+				0A72D7B01F9CAFAD000C7805 /* NPMatrix.m */,
+				0A72D7B11F9CAFAD000C7805 /* NPMatrixUtilities.m */,
+				0A72D7B21F9CAFAD000C7805 /* NPMatrixType.m */,
+				0A72D7B31F9CAFAD000C7805 /* NPMatrixOperate.m */,
+				0A72D7B41F9CAFAD000C7805 /* NPCannyOperator.m */,
+				0A72D7B51F9CAFAD000C7805 /* NPMatrixRGBA.h */,
+				0A72D7B61F9CAFAD000C7805 /* NPCommonAlgorithm.h */,
+			);
+			path = NPMatrix;
+			sourceTree = "<group>";
+		};
 		7704DBF21F7B773800C069FF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +446,8 @@
 		77B909BE1F7A03A500F9CBFB /* CrackQianTang */ = {
 			isa = PBXGroup;
 			children = (
+				0A72D7A61F9CAFAD000C7805 /* NPMatrix */,
+				0A02E5A91F9B6D07007774BB /* QTImageDetector */,
 				7752A17D1F96094200D53D3B /* EKAlgorithms */,
 				7704DBF21F7B773800C069FF /* View */,
 				77B909D81F7A06D200F9CBFB /* GameEngine */,
@@ -477,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B909CC1F7A03A500F9CBFB /* LaunchScreen.storyboard in Resources */,
+				0A72D7C31F9CE8C3000C7805 /* qt121.png in Resources */,
 				77B909C91F7A03A500F9CBFB /* Assets.xcassets in Resources */,
 				77B909C71F7A03A500F9CBFB /* Main.storyboard in Resources */,
 			);
@@ -490,9 +560,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7752A1C81F960DC700D53D3B /* EKTree.m in Sources */,
+				0A72D7BB1F9CAFAE000C7805 /* NPMatrixUtilities.m in Sources */,
 				7752A1C91F960DC700D53D3B /* EKTreeNode.m in Sources */,
 				7752A1CA1F960DC700D53D3B /* EKNode.m in Sources */,
+				0A72D7B91F9CAFAE000C7805 /* NPCommonMatrixes.m in Sources */,
+				0A72D7BE1F9CAFAE000C7805 /* NPCannyOperator.m in Sources */,
 				7752A1CB1F960DC700D53D3B /* EKLinkedList.m in Sources */,
+				0A72D7C11F9CB2CE000C7805 /* UIImage+Canny.m in Sources */,
 				7752A1CC1F960DC700D53D3B /* EKGraph.m in Sources */,
 				7752A1CD1F960DC700D53D3B /* EKVertex.m in Sources */,
 				7752A1CE1F960DC700D53D3B /* EKEdge.m in Sources */,
@@ -500,6 +574,7 @@
 				7752A1D01F960DC700D53D3B /* EKBSTree.m in Sources */,
 				7752A1D11F960DC700D53D3B /* EKBTreeNode.m in Sources */,
 				7752A1D21F960DC700D53D3B /* EKStack.m in Sources */,
+				0A72D7BA1F9CAFAE000C7805 /* NPMatrix.m in Sources */,
 				7752A1D31F960DC700D53D3B /* EKDeque.m in Sources */,
 				7752A1D41F960DC700D53D3B /* EKQueue.m in Sources */,
 				7752A1D51F960DC700D53D3B /* EKBTree.m in Sources */,
@@ -512,6 +587,8 @@
 				7752A1DC1F960DC700D53D3B /* NSString+EKStuff.m in Sources */,
 				7752A1DD1F960DC700D53D3B /* SSRadixNode.m in Sources */,
 				7752A1DE1F960DC700D53D3B /* NSArray+EKSorting.m in Sources */,
+				0A72D7BC1F9CAFAE000C7805 /* NPMatrixType.m in Sources */,
+				0A72D7BD1F9CAFAE000C7805 /* NPMatrixOperate.m in Sources */,
 				7752A1DF1F960DC700D53D3B /* NSNumber+EKStuff.m in Sources */,
 				7752A1E01F960DC700D53D3B /* NSArray+Selection.m in Sources */,
 				7752A1E11F960DC700D53D3B /* NSArray+EKStuff.m in Sources */,
@@ -523,11 +600,14 @@
 				77D676531F984B6F009FFD27 /* QTMapSingleton.m in Sources */,
 				77B909ED1F7A266600F9CBFB /* QTIdentifyGenerator.m in Sources */,
 				77B909DB1F7A1A0700F9CBFB /* QTGameEngine.m in Sources */,
+				0A72D7B81F9CAFAE000C7805 /* NPCommonAlgorithm.m in Sources */,
+				0A02E5AF1F9B6EF1007774BB /* QTPixels2Elements.m in Sources */,
 				7704DC011F7B785C00C069FF /* QTVerticalBlockView.m in Sources */,
 				77B909CF1F7A03A500F9CBFB /* main.m in Sources */,
 				77B909EA1F7A21B100F9CBFB /* QTGameElementFactory.m in Sources */,
 				77B909E11F7A1C0E00F9CBFB /* QTGameElement.m in Sources */,
 				7704DBFB1F7B783C00C069FF /* QTFinshView.m in Sources */,
+				0A72D7B71F9CAFAE000C7805 /* NPMatrixRGBA.m in Sources */,
 				77B909DE1F7A1A5800F9CBFB /* QTGameMap.m in Sources */,
 				7704DBF81F7B780E00C069FF /* QTBaseView.m in Sources */,
 				77B909E71F7A217600F9CBFB /* QTFishBlocker.m in Sources */,

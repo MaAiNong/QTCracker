@@ -26,6 +26,8 @@
     int boardTime = QT_BOARD_COUNT;
     CGFloat meta = CGRectGetWidth(frame)/boardTime;
     
+    UIColor* backGroundColor = (element.blockNumber==2)?[UIColor yellowColor]:[UIColor blueColor];
+    
     if ([element isKindOfClass:[QTFishBlocker class]])
     {
         if (ElementDirection_Horizon == element.direction)
@@ -34,7 +36,7 @@
             
             [view setFrame:CGRectMake(x*meta, y*meta, count*meta, 1*meta)];
            
-            [view setBackgroundColor:[UIColor orangeColor]];
+            [view setBackgroundColor:backGroundColor];
             
             [view.layer setBorderColor:[UIColor blackColor].CGColor];
             [view.layer setBorderWidth:1.0f];
@@ -46,7 +48,7 @@
         {
             QTVerticalBlockView* view = [[QTVerticalBlockView alloc] init];
             [view setFrame:CGRectMake(x*meta, y*meta,1*meta,count*meta)];
-            [view setBackgroundColor:[UIColor yellowColor]];
+            [view setBackgroundColor:backGroundColor];
             [view.layer setBorderColor:[UIColor blackColor].CGColor];
             [view.layer setBorderWidth:1.0f];
             view.identify = element.identity;

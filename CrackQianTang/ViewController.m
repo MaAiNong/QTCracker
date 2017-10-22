@@ -33,19 +33,29 @@
     self.gameBoard = game;
     [self.view addSubview:self.gameBoard];
     
-    self.gameEngine = [[QTGameEngine alloc] init];
+    self.gameEngine = [[QTGameEngine alloc] initWithImage:[UIImage imageNamed:@"qt121.png"]];
     [self.gameEngine setDelegate:self];
-    [self.gameEngine start];
-    
-    [self.gameBoard drawGameWithMap:[self.gameEngine gameMap]];
-    
-    self.crackQueue = dispatch_queue_create("com.man.sb", DISPATCH_QUEUE_SERIAL);
-    self.uiQueue = dispatch_queue_create("com.man.ui", DISPATCH_QUEUE_SERIAL);
-    
-    dispatch_async(self.crackQueue, ^{
-        _startTime = [NSDate timeIntervalSinceReferenceDate];
-        [self.gameEngine crack];
-    });
+    if([self.gameEngine start])
+    {
+        [self.gameBoard drawGameWithMap:[self.gameEngine gameMap]];
+        
+        self.crackQueue = dispatch_queue_create("com.man.sb", DISPATCH_QUEUE_SERIAL);
+        self.uiQueue = dispatch_queue_create("com.man.ui", DISPATCH_QUEUE_SERIAL);
+        
+        
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), self.crackQueue, ^{
+        
+            _startTime = [NSDate timeIntervalSinceReferenceDate];
+            [self.gameEngine crack];
+            
+
+        });
+    }
+    else
+    {
+        NSLog(@"cannot start game");
+    }
     
 }
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "QTGameMap.h"
 #import "EKDeque.h"
+#import <UIKit/UIKit.h>
 @class QTGameEngine;
 @protocol QTGameEngineDelegate<NSObject>
 -(void)mapEngine:(QTGameEngine*)engine crackSuccess:(EKDeque*)resultQueue;
@@ -19,8 +20,8 @@
 @interface QTGameEngine : NSObject
 
 @property(nonatomic,weak)id<QTGameEngineDelegate>delegate;
-
--(void)start;
+-(id)initWithImage:(UIImage*)image;
+-(BOOL)start;
 -(QTGameMap*)gameMap;
 -(QTGameMap*)crack;
 @end
