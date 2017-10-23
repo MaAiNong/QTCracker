@@ -18,37 +18,37 @@
 @interface QTGameEngine()
 @property(nonatomic,strong)QTGameMap* gameMap;
 @property(nonatomic,strong)EKDeque* mapDeque;
-@property(nonatomic,strong)UIImage* gameImage;
 @end
 
 @implementation QTGameEngine
 
--(id)initWithImage:(UIImage*)image
+-(id)init
 {
     if (self  = [super init]) {
-        self.gameImage = image;
+        self.mapDeque = [[EKDeque alloc] init];
+        self.gameMap = nil;
     }
     return self;
 }
 
 -(BOOL)start
 {
-    self.mapDeque = [[EKDeque alloc] init];
-//    self.usedMap = [[EKQueue alloc] init];
-    
-    [[QTIdentifyGenerator sharedInstance] reset];
-    [[QTMapSingleton sharedSingleton] clearAll];
-    
-    if (!self.gameImage) {
-        NSLog(@"NO IMAGE");
-        return NO;
-    }
-    
-    self.gameMap = [self.gameImage QTGameMap];
-    if (!self.gameMap||[self.gameMap isEmpty]) {
-        NSLog(@"NO MAP");
-        return NO;
-    }
+//    self.mapDeque = [[EKDeque alloc] init];
+////    self.usedMap = [[EKQueue alloc] init];
+//
+//    [[QTIdentifyGenerator sharedInstance] reset];
+//    [[QTMapSingleton sharedSingleton] clearAll];
+//
+//    if (!self.gameImage) {
+//        NSLog(@"NO IMAGE");
+//        return NO;
+//    }
+//
+//    self.gameMap = [self.gameImage QTGameMap];
+//    if (!self.gameMap||[self.gameMap isEmpty]) {
+//        NSLog(@"NO MAP");
+//        return NO;
+//    }
     
     
     //初始化map
@@ -100,6 +100,37 @@
     }
 }
 
+-(BOOL)crackWithMap:(QTGameMap*)map crackType:(QTGameCrackType)crackType
+{
+    
+    self.gameMap = map;
+    [self.mapDeque clear];
+    [[QTMapSingleton sharedSingleton] clearAll];
+    [[QTMapSingleton sharedSingleton] addMap:_gameMap];
+    
+    if([_gameMap canFishMoveOut]) {
+        
+        [self noNeedToCrack];
+        return YES;
+    }
+    if (QTGameCrackType_BFS == crackType)
+    {//广度遍历
+        EKQueue* tmpQueue = [[EKQueue alloc] init];
+        [tmpQueue insertObject:self.gameMap];
+        [self BFSCrackMap:tmpQueue];
+    }
+    else if (QTGameCrackType_DFS == crackType)
+    {//深度遍历
+        [self DFSCrackMap:_gameMap];
+    }
+    if ([self.mapDeque isEmpty])
+    {
+        [self crackFailed];
+        return NO;
+    }
+    return YES;
+}
+
 -(QTGameMap*)crack;
 {
     [self.mapDeque clear];
@@ -143,7 +174,7 @@
             }
             else
             {
-                EKQueue* newMoves = [map allMoves];//[map newAllMoves];
+                EKQueue* newMoves = [map newAllMoves];
                 [newQueue insertEKQueue:newMoves];
             }
             map = [maps removeFirstObject];

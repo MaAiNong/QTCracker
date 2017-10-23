@@ -146,7 +146,7 @@
                         }
                         else
                         {
-                            elment = [QTGameElementFactory generateHorizonBlocker:x position:y number:2];
+                            elment = [QTGameElementFactory generateHorizonBlocker:x position:y number:blockNUM];
                         }
                         if (blockNUM == 2) {
                             [pointArray addObject:[NSValue valueWithCGPoint:CGPointMake(x+1,y)]];

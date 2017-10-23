@@ -17,7 +17,6 @@
 		0A72D7BD1F9CAFAE000C7805 /* NPMatrixOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B31F9CAFAD000C7805 /* NPMatrixOperate.m */; };
 		0A72D7BE1F9CAFAE000C7805 /* NPCannyOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7B41F9CAFAD000C7805 /* NPCannyOperator.m */; };
 		0A72D7C11F9CB2CE000C7805 /* UIImage+Canny.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */; };
-		0A72D7C31F9CE8C3000C7805 /* qt121.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A72D7C21F9CE8C2000C7805 /* qt121.png */; };
 		7704DBF51F7B775A00C069FF /* QTElementToView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBF41F7B775A00C069FF /* QTElementToView.m */; };
 		7704DBF81F7B780E00C069FF /* QTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBF71F7B780E00C069FF /* QTBaseView.m */; };
 		7704DBFB1F7B783C00C069FF /* QTFinshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7704DBFA1F7B783C00C069FF /* QTFinshView.m */; };
@@ -90,7 +89,6 @@
 		0A72D7B61F9CAFAD000C7805 /* NPCommonAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPCommonAlgorithm.h; sourceTree = "<group>"; };
 		0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Canny.m"; sourceTree = "<group>"; };
 		0A72D7C01F9CB2CE000C7805 /* UIImage+Canny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Canny.h"; sourceTree = "<group>"; };
-		0A72D7C21F9CE8C2000C7805 /* qt121.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qt121.png; sourceTree = "<group>"; };
 		7704DBF31F7B775A00C069FF /* QTElementToView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTElementToView.h; sourceTree = "<group>"; };
 		7704DBF41F7B775A00C069FF /* QTElementToView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTElementToView.m; sourceTree = "<group>"; };
 		7704DBF61F7B780E00C069FF /* QTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTBaseView.h; sourceTree = "<group>"; };
@@ -103,6 +101,7 @@
 		7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTVerticalBlockView.m; sourceTree = "<group>"; };
 		7704DC021F7B788700C069FF /* QTViewFatory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTViewFatory.h; sourceTree = "<group>"; };
 		7704DC031F7B788700C069FF /* QTViewFatory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTViewFatory.m; sourceTree = "<group>"; };
+		771BACAD1F9DC33500B37FF9 /* qtimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qtimage.png; sourceTree = "<group>"; };
 		7752A17E1F96094200D53D3B /* NSString+EKStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+EKStuff.h"; sourceTree = "<group>"; };
 		7752A1811F96094200D53D3B /* EKTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTree.m; sourceTree = "<group>"; };
 		7752A1821F96094200D53D3B /* EKTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTreeNode.m; sourceTree = "<group>"; };
@@ -213,7 +212,7 @@
 				0A02E5AE1F9B6EF1007774BB /* QTPixels2Elements.m */,
 				0A72D7C01F9CB2CE000C7805 /* UIImage+Canny.h */,
 				0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */,
-				0A72D7C21F9CE8C2000C7805 /* qt121.png */,
+				771BACAD1F9DC33500B37FF9 /* qtimage.png */,
 			);
 			path = QTImageDetector;
 			sourceTree = "<group>";
@@ -546,7 +545,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B909CC1F7A03A500F9CBFB /* LaunchScreen.storyboard in Resources */,
-				0A72D7C31F9CE8C3000C7805 /* qt121.png in Resources */,
 				77B909C91F7A03A500F9CBFB /* Assets.xcassets in Resources */,
 				77B909C71F7A03A500F9CBFB /* Main.storyboard in Resources */,
 			);

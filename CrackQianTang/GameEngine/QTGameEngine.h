@@ -10,6 +10,9 @@
 #import "QTGameMap.h"
 #import "EKDeque.h"
 #import <UIKit/UIKit.h>
+
+typedef enum {QTGameCrackType_Default=0,QTGameCrackType_BFS,QTGameCrackType_DFS}QTGameCrackType;
+
 @class QTGameEngine;
 @protocol QTGameEngineDelegate<NSObject>
 -(void)mapEngine:(QTGameEngine*)engine crackSuccess:(EKDeque*)resultQueue;
@@ -20,8 +23,8 @@
 @interface QTGameEngine : NSObject
 
 @property(nonatomic,weak)id<QTGameEngineDelegate>delegate;
--(id)initWithImage:(UIImage*)image;
--(BOOL)start;
+
 -(QTGameMap*)gameMap;
--(QTGameMap*)crack;
+-(BOOL)crackWithMap:(QTGameMap*)map crackType:(QTGameCrackType)crackType;
+
 @end

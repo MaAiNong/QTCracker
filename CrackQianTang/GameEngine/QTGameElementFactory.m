@@ -16,6 +16,8 @@
     header.positionX = px;
     header.positionY = py;
     
+    NSLog(@"%@",header);
+    
     return header;
 }
 
