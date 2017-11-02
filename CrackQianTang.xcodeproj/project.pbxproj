@@ -66,6 +66,7 @@
 		77B909EA1F7A21B100F9CBFB /* QTGameElementFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909E91F7A21B100F9CBFB /* QTGameElementFactory.m */; };
 		77B909ED1F7A266600F9CBFB /* QTIdentifyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */; };
 		77D676531F984B6F009FFD27 /* QTMapSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D676511F984B6F009FFD27 /* QTMapSingleton.m */; };
+		77E9F8EB1FAB014800212494 /* qt121.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 77E9F8EA1FAB014700212494 /* qt121.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +102,7 @@
 		7704DC001F7B785C00C069FF /* QTVerticalBlockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTVerticalBlockView.m; sourceTree = "<group>"; };
 		7704DC021F7B788700C069FF /* QTViewFatory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTViewFatory.h; sourceTree = "<group>"; };
 		7704DC031F7B788700C069FF /* QTViewFatory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTViewFatory.m; sourceTree = "<group>"; };
-		771BACAD1F9DC33500B37FF9 /* qtimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qtimage.png; sourceTree = "<group>"; };
+		771BACAD1F9DC33500B37FF9 /* qt133.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qt133.png; sourceTree = "<group>"; };
 		7752A17E1F96094200D53D3B /* NSString+EKStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+EKStuff.h"; sourceTree = "<group>"; };
 		7752A1811F96094200D53D3B /* EKTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTree.m; sourceTree = "<group>"; };
 		7752A1821F96094200D53D3B /* EKTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTreeNode.m; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 		77B909EC1F7A266600F9CBFB /* QTIdentifyGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTIdentifyGenerator.m; sourceTree = "<group>"; };
 		77D6764F1F984B6F009FFD27 /* QTMapSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMapSingleton.h; sourceTree = "<group>"; };
 		77D676511F984B6F009FFD27 /* QTMapSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMapSingleton.m; sourceTree = "<group>"; };
+		77E9F8EA1FAB014700212494 /* qt121.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qt121.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +214,8 @@
 				0A02E5AE1F9B6EF1007774BB /* QTPixels2Elements.m */,
 				0A72D7C01F9CB2CE000C7805 /* UIImage+Canny.h */,
 				0A72D7BF1F9CB2CE000C7805 /* UIImage+Canny.m */,
-				771BACAD1F9DC33500B37FF9 /* qtimage.png */,
+				77E9F8EA1FAB014700212494 /* qt121.jpeg */,
+				771BACAD1F9DC33500B37FF9 /* qt133.png */,
 			);
 			path = QTImageDetector;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				77B909CC1F7A03A500F9CBFB /* LaunchScreen.storyboard in Resources */,
 				77B909C91F7A03A500F9CBFB /* Assets.xcassets in Resources */,
 				77B909C71F7A03A500F9CBFB /* Main.storyboard in Resources */,
+				77E9F8EB1FAB014800212494 /* qt121.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

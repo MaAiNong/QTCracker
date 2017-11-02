@@ -58,7 +58,7 @@
     //绘制UI的线程
     self.uiQueue = dispatch_queue_create("com.man.ui", DISPATCH_QUEUE_SERIAL);
 
-    [self showImagePicker];
+//    [self showImagePicker];
     
 }
 
